@@ -1,0 +1,19 @@
+body {
+  /* font-family: 'Crimson Text', serif; */
+  font-size: 48px;
+	color: #444;
+	font-size: 18px;
+	line-height: 1.6;
+	margin: 40px auto;
+	max-width: 650px;
+	padding: 0 10px;
+}
+
+a {
+  color: hotpink;
+}
+h1,
+h2,
+h3 {
+	line-height: 1.2;
+}
