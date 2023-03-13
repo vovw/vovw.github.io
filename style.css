@@ -8,12 +8,13 @@
 body{
     font-family:'Times New Roman', monospace;
     font-size: 48px;
+    background-color: #e6e9f1;
     color: #444;
-	font-size: 18px;
-	line-height: 1.6;
-	margin: 40px auto;
-	max-width: 650px;
-	padding: 0 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 40px auto;
+    max-width: 650px;
+    padding: 0 10px;
 }
 
 a {
