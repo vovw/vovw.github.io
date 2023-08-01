@@ -1,29 +1,32 @@
 .smexy {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  border-radius: 10px;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 50%;
+  	border-radius: 10px;
 }
 
 body {
-  font-family: 'Times New Roman', monospace;
-  font-size: 48px;
-  background-color: #e6e9f1;
-  color: #19160e;
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 40px auto;
-  max-width: 650px;
-  padding: 0 10px;
+	font-family: 'Times New Roman', monospace;
+	font-size: 48px;
+  	background-color: #e6e9f1;
+  	color: #19160e;
+  	font-size: 18px;
+  	line-height: 1.6;
+  	margin: 40px auto;
+  	max-width: 650px;
+  	padding: 0 10px;
 }
 
 a {
-  color: #7447;
+	color: purple;
+	text-decoration: underline;
+    text-underline-offset: 1px;
+    text-decoration-thickness: 1px;
 }
 
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+	line-height: 1.2;
 }
