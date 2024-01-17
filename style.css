@@ -23,4 +23,8 @@ img, video, iframe, audio {
     border-radius: 10px;
     max-width: 100%;
 }
-
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
