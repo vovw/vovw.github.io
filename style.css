@@ -13,11 +13,16 @@ body {
     padding-top: 20px;
 }
 
-h1, h2, p {
+h1,
+h2,
+p {
     text-align: left;
 }
 
-img, video, iframe, audio {
+img,
+video,
+iframe,
+audio {
     display: block;
     margin: 0 auto;
     border-radius: 10px;
