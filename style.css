@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
-
 /* Settings */
 :root {
   --size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);
@@ -17,10 +16,9 @@
 body {
   background: var(--color-light);
   color: var(--color-dark);
-  padding: var(--spacing) clamp(calc(var(--spacing) / 2), 5vw, calc(var(--spacing) * 3));
+  padding: 50px;
   font-family: var(--font-stack);
   font-size: var(--size-step-1);
-  line-height: 1.4;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -58,7 +56,7 @@ a:hover {
 
 img {
   display: block;
-  max-width: 100%;
+  border-radius: 10px;
   height: auto;
   background-color: var(--color-primary);
   -webkit-filter: contrast(80%) grayscale(30%) opacity(70%);
