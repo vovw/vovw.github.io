@@ -3,9 +3,7 @@ weebsite
 url - ksagar.me
 
 
-``` 
 sh gen_post.sh post_name
-```
 
 faq?
 
