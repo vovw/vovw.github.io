@@ -1,5 +1,6 @@
 # from mistral to DeepSeekCoderv2 lite
 a wip documenting my work to go take my inference engine from mistral to DeepSeekCoderv2 which is a SOTA coding model
+
 ## Attention Block
 
 "Attention is all you need" memes.

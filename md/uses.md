@@ -14,8 +14,8 @@
 - kindle - jailbroken and runs koreader
 - custom build QAZ
 - phone - iphone 13 (spotify, books, pintrest)
-- wired apple earphones (cheap, wired, comfy)
-- apple airpods 1st gen
+- wired apple earphones (best earphones money can buy and i can fight for it, wired, comfy)
+
 
 dotfiles here - [vovw/dotfiles](https://github.com/vovw/dotfiles)
 
