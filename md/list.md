@@ -1,8 +1,13 @@
-# list of da blogs
+# blogs
 
+ideas, writings, notes, and everything nice
+
+
+## notes
+
+## writings
+- [Independent Research](../blog/research.html)
 
 ## evergreen
-[friends](../blog/friends.html)
-[thoughts posting](../blog/thought.html)
-
-
+- [friends](../blog/friends.html)
+- [thoughts posting](../blog/thought.html)

@@ -10,6 +10,7 @@ I've been working on a few problems for the past few months, namely:
 - World models or state predicting models for robotics navigation
 - Language models and their use in helping humans solve difficult problems
 - Fast inference of large models on local hardware
+- Better, faster, efficent Robotics systems.
 
 *PS: If you're an individual or a lab working on this, please slide into my DMs.*
 
@@ -28,7 +29,7 @@ I don't come from an academic background, so the "academia and its jargon" is al
 
 ## Advantages of Being a Independent Researcher
 
-Now here come advantages of being a lone wolf (I had to) researcher:
+Now here comes advantages of being a lone wolf (I had to) researcher:
 
 1. **Agency**: It's insane how many times I've just gone into rabbit holes of my own to learn things I'm curious about, and that is something I value a lot.
 

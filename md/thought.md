@@ -10,3 +10,10 @@
 - [information consumption](https://x.com/k7agar/status/1803910740488917170)
 - [superior software](https://x.com/k7agar/status/1803901469910876579)
 - [modern computers](https://x.com/k7agar/status/1802399290620367008)
+
+
+## hard images
+
+- [desk](https://x.com/k7agar/status/1818298718438998381)
+- [7 hr sprints](https://x.com/k7agar/status/1816878949999230988)
+
