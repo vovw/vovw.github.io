@@ -1,7 +1,7 @@
 body {
-    background: #c4c0aa;
+    background: #ffffff;
     color: #333;
-    font: 2em/1.6 sans-serif; /* Increased font size and used default sans-serif font */
+    font: 1.5em sans-serif;
     max-width: 800px;
     margin: 20px auto;
     padding: 0 20px;
@@ -49,7 +49,7 @@ th, td {
     text-align: left;
 }
 @media (max-width: 600px) {
-    h2 {
+    body {
         font-size: 1.5em;
     }
 }
