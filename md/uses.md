@@ -5,7 +5,7 @@
 - macbook Air 2017
 
 ## software
-- terminal - [ghostty](https://mitchellh.com/ghostty)
+- terminal - [ghostty](https://mitchellh.com/ghostty) w tmux
 - editor - neovim
 - browser - [ungoogled chromium](https://en.wikipedia.org/wiki/Ungoogled-chromium) and safari
 - rss feeder - [vore.website/voidz](https://vore.website/voidz)
