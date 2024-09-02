@@ -2,6 +2,7 @@
 
 - [vibhuti](https://www.vibhutea.com/) 
 - [arpit](https://arpitingle.github.io/)
+- [Dhravya Shah](https://dhravya.dev) 
 - [sujal](https://5usu.github.io)
 - [umang](https://umgbhalla.xyz)
 - [naklecha](https://www.naklecha.com)
