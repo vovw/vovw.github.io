@@ -38,7 +38,7 @@
       <!-- Open Graph / Facebook -->
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.ksagar.me/" />
-      <meta property="og:title" content="engineering, art, life" />
+      <meta property="og:title" content="your friendly neighbourhood engineer" />
       <meta property="og:description" content="personal website for ksagar" />
       <meta
           property="og:image"
@@ -68,10 +68,12 @@ rl</a></li>
 <li><a href="#markov-decision-process-mdp"
 id="toc-markov-decision-process-mdp">Markov Decision Process
 (MDP)</a></li>
-<li><a href="#q-learning" id="toc-q-learning">Q Learning</a></li>
 </ul></li>
-<li><a href="#about-the-methods" id="toc-about-the-methods">about the
-methods</a></li>
+<li><a href="#algorithms" id="toc-algorithms">algorithms</a>
+<ul>
+<li><a href="#vanilla-policy-gradient"
+id="toc-vanilla-policy-gradient">Vanilla Policy Gradient</a></li>
+</ul></li>
 <li><a href="#applications" id="toc-applications">applications</a></li>
 <li><a href="#examples" id="toc-examples">examples</a></li>
 <li><a href="#rl-based-control" id="toc-rl-based-control">rl based
@@ -79,6 +81,13 @@ control</a></li>
 </ul>
 </nav>
 <h1 id="introduction-to-rl">introduction to rl</h1>
+<p>The agent is acting in an environment. How the environment reacts to
+certain actions is defined by a model which we may or may not know. The
+agent can stay in one of many states of the environment, and choose to
+take one of many actions () to switch from one state to another. Which
+state the agent will arrive in is decided by transition probabilities
+between states. Once an action is taken, the environment delivers a
+reward as feedback</p>
 <h1 id="terms">terms</h1>
 <h3 id="model-free-rl">model-free rl</h3>
 <ul>
@@ -102,17 +111,18 @@ environment</li>
 <li>has - STATES(S), ACTIONS(A), TRANSITION PROBS(P), REWARDS(R),
 DISCOUNT FACTOR (γ)</li>
 </ul>
-<h3 id="q-learning">Q Learning</h3>
+<h1 id="algorithms">algorithms</h1>
+<h2 id="vanilla-policy-gradient">Vanilla Policy Gradient</h2>
 <ul>
-<li>model free</li>
-<li>learn optimal actions by iteratively updating Q-values based on
-rewards and future potential rewards.</li>
-<li>we use q table for storing action values for each state, while
-balancing trying new actions(exploring)and using best know
-actions(exploiting). controlling how the new info updates the old values
-(learning rate)</li>
+<li>stochastic policy</li>
 </ul>
-<h1 id="about-the-methods">about the methods</h1>
+<p>π(a|s,θ) Prob(action|state, params)</p>
+<ul>
+<li>change params so as to maximise rewards</li>
+<li>different from TD learning, no neeed for calculating Q value or V
+value.</li>
+<li>better for continuous states</li>
+</ul>
 <h1 id="applications">applications</h1>
 <h1 id="examples">examples</h1>
 <h1 id="rl-based-control">rl based control</h1>
