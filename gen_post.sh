@@ -6,6 +6,7 @@ convert_file() {
     local filename_without_extension="${filename%.*}"
     
     pandoc -H template.html \
+	    -s --mathjax \
         --toc --highlight-style tango.theme \
         --resource-path=media \
         --css <(echo "") \
