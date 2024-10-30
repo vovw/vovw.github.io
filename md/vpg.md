@@ -107,7 +107,7 @@ The negative sign is crucial because we typically **perform gradient descent to 
 
 ## Detailed Algorithm Steps
 
-1. **Initialize the Policy Network**: 
+1. **Initialize the Policy Network**:
    We start by initializing our policy network $\pi_\theta(a|s)$ with random weights $\theta$.
 
 2. **Collect Trajectories**:
@@ -180,14 +180,14 @@ def update_policy(log_probs, rewards):
         G = r + 0.99 * G  # 0.99 is the discount factor
         returns.insert(0, G)
     returns = torch.tensor(returns, dtype=torch.float32)
-    
+
     if len(returns) > 1:
         returns = (returns - returns.mean()) / (returns.std() + 1e-8)  # Normalization
-    
+
     policy_loss = []
     for log_prob, R in zip(log_probs, returns):
         policy_loss.append(-log_prob * R)  # Negative because we're doing gradient ascent
-    
+
     optimizer.zero_grad()
     policy_loss = torch.stack(policy_loss).sum()
     policy_loss.backward()
@@ -244,3 +244,5 @@ By iterating this process over many episodes, the policy gradually improves, lea
 
 following the core principles of the REINFORCE algorithm
 
+
+[home](../index.html)

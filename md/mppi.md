@@ -10,7 +10,7 @@ MPPI is a variant of MPC that uses stochasitc optimization to compute control ac
 
 2 features that affect controllers perf
 
-- trajectory 
+- trajectory
 seq of states that a system passes through over time, in MPPI we sample multiple trajectories, eval cost associated with each trajectory and then use it to determine the optimal control
 
 - the horizon
@@ -52,3 +52,6 @@ the optimal control input is computed as a weighted average of the sampled contr
 $w^k = \frac{\exp(-\lambda S^k)}{\sum_{j=2}^K \exp(-\lambda S^j)}$
 
 
+
+
+[home](../index.html)
