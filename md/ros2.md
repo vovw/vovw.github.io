@@ -1,8 +1,8 @@
-```bash 
+```bash
 conda create -n ros_env python=3.11
 conda activate ros_env
 
-# this adds the conda-forge channel to the new created environment configuration 
+# this adds the conda-forge channel to the new created environment configuration
 conda config --env --add channels conda-forge
 # and the robostack channel
 conda config --env --add channels robostack-staging
@@ -44,3 +44,5 @@ alias cdr='conda deactivate'  # Deactivate conda env and source ROS2
 ## this is going to happen
 [setuptools issue](https://github.com/RoboStack/ros-humble/issues/162)
 
+
+[home](../index.html)

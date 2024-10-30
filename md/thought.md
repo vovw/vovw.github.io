@@ -1,5 +1,5 @@
 ## some of my non technical posts i really like
-- [failure](https://x.com/k7agar/status/1795354727284433325) 
+- [failure](https://x.com/k7agar/status/1795354727284433325)
 - [networking](https://x.com/k7agar/status/1808922356007538941)
 - [research papers](https://x.com/k7agar/status/1810326791560613964)
 - [hard work](https://x.com/k7agar/status/1808920529874923652)
@@ -17,3 +17,6 @@
 - [desk](https://x.com/k7agar/status/1818298718438998381)
 - [7 hr sprints](https://x.com/k7agar/status/1816878949999230988)
 
+
+
+[home](../index.html)

@@ -20,3 +20,6 @@
 - [paulg](https://paulgraham.com)
 - [james](http://jvscholz.com)
 - [geohot](https://geohot.com)
+
+
+[home](../index.html)

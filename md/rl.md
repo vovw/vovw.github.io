@@ -1,11 +1,11 @@
-# introduction to rl 
+# introduction to rl
 The agent is acting in an environment. How the environment reacts to certain actions is defined by a model which we may or may not know. The agent can stay in one of many states of the environment, and choose to take one of many actions () to switch from one state to another. Which state the agent will arrive in is decided by transition probabilities between states. Once an action is taken, the environment delivers a reward as feedback
 
 
 
 # terms
 
-### model-free rl 
+### model-free rl
 - do not reply on model of the enviroment
 - directly learn the policy or value function from expirence
 - generally easier to implement and tune
@@ -37,11 +37,13 @@ Prob(action|state, params)
 
 
 
-# applications 
+# applications
 
 
 # examples
 
 
 # rl based control
-    
+
+
+[home](../index.html)

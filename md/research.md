@@ -58,3 +58,5 @@ Now here comes advantages of being a lone wolf (I had to) researcher:
 [^3]: Thanks to https://evjang.com/
 [^4]: I realized this really late, but now I spam Twitter and emails.
 [^5]: UW grads, startup consultants who are masters of their craft, people who eat startups in a weekend.
+
+[home](../index.html)

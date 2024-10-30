@@ -19,3 +19,6 @@ debian with sway
 
 
 dotfiles here - [vovw/dotfiles](https://github.com/vovw/dotfiles)
+
+
+[home](../index.html)
