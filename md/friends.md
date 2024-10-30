@@ -1,13 +1,14 @@
 ## friends
 
-- [prajwal](https://crisiumnih.github.io) 
+- [prajwal](https://crisiumnih.github.io)
 - [gourva](https://gourav.sh/)
 - [sujal](https://5usu.github.io)
+- [siri](https://5iri.github.io)
 - [arpit](https://arpitingle.github.io/)
-- [Dhravya Shah](https://dhravya.dev) 
+- [Dhravya Shah](https://dhravya.dev)
 - [umang](https://umgbhalla.xyz)
 - [naklecha](https://www.naklecha.com)
-- [vibhuti](https://www.vibhutea.com/) 
+- [vibhuti](https://www.vibhutea.com/)
 - [blapse](https://theblapse.me/)
 - [kesku](https://kesku.me)
 - [ludwig](https://ludwigabap.bearblog.dev)

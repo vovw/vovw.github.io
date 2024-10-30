@@ -1,55 +1,100 @@
 body {
-    background: #ffffff;
-    color: #333;
-    font: 1.5em sans-serif;
-    max-width: 800px;
+    background: #f4f1de;
+    color: #2f2f2f;
+    font-family: "Georgia", serif;
+    max-width: 900px;
     margin: 20px auto;
     padding: 0 20px;
+    line-height: 1.6;
+    font-size: 1.2em;
 }
+
+.content-wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 2em;
+}
+
+.text-content {
+    flex: 2;
+}
+
+.image-container {
+    flex: 1;
+    /* position: sticky; */
+    top: 20px;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 300px;
+    border: 3px solid #2f2f2f;
+    border-radius: 5px;
+}
+
 h2 {
+    font-family: "Times New Roman", serif;
     font-weight: bold;
     margin: 20px 0;
+    color: #2f2f2f;
+    border-bottom: 2px solid #2f2f2f;
+    padding-bottom: 5px;
 }
-p, div, ul, table {
+
+p,
+div,
+ul,
+table {
     margin-bottom: 20px;
 }
-div {
-    background: #fff;
-    border: 2px solid #333;
-    padding: 20px;
-}
-img {
-    width: 100%;
-    border: 1px solid #333;
-    margin-bottom: 20px;
-}
-button {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-button:hover {
-    background: #555;
-}
+
 li {
     margin: 0 0 10px 20px;
-    list-style: disc;
+    list-style: square;
 }
-table {
-    width: 100%;
-    border-collapse: collapse;
+
+a {
+    color: #2f2f2f;
+    text-decoration: none;
+    border-bottom: 2px solid #2f2f2f;
+    padding-bottom: 1px;
+    transition: all 0.3s ease;
 }
-th, td {
-    border: 1px solid #333;
-    padding: 10px;
-    text-align: left;
+
+a:hover {
+    background-color: #2f2f2f;
+    color: #f4f1de;
 }
-@media (max-width: 600px) {
+
+hr {
+    border: none;
+    border-top: 2px solid #2f2f2f;
+    margin: 20px 0;
+}
+
+nav {
+    font-family: "Courier New", monospace;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .image-container {
+        order: -1;
+        margin-bottom: 20px;
+    }
+
     body {
-        font-size: 1.5em;
+        font-size: 1.1em;
+    }
+
+    .profile-image {
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
     }
 }
