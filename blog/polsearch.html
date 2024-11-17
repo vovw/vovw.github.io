@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>polsearch</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {  background-color: #f8f8f8; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ef2929; } /* Alert */
+    code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #204a87; } /* Attribute */
+    code span.bn { color: #0000cf; } /* BaseN */
+    code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4e9a06; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #8f5902; font-style: italic; } /* Comment */
+    code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+    code span.dt { color: #204a87; } /* DataType */
+    code span.dv { color: #0000cf; } /* DecVal */
+    code span.er { color: #a40000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #0000cf; } /* Float */
+    code span.fu { color: #204a87; font-weight: bold; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+    code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+    code span.ot { color: #8f5902; } /* Other */
+    code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+    code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+    code span.ss { color: #4e9a06; } /* SpecialString */
+    code span.st { color: #4e9a06; } /* String */
+    code span.va { color: #000000; } /* Variable */
+    code span.vs { color: #4e9a06; } /* VerbatimString */
+    code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="/dev/fd/63" />
+  <head>
+      <link rel="stylesheet" type="text/css" href="../style.css" />
+      <link rel="icon" type="image/png" href="cat.png" />
+
+      <meta charset="UTF-8" />
+      <meta name="description" content="personal website for ksagar" />
+      <meta
+          name="keywords"
+          content="ksagar, vovw, atharva, k7agar, atharva kshirsagar"
+      />
+      <meta name="author" content="ksagar" />
+
+      <!-- Open Graph / Facebook -->
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="https://www.ksagar.me/" />
+      <meta property="og:title" content="your friendly neighbourhood engineer" />
+      <meta property="og:description" content="personal website for ksagar" />
+      <meta
+          property="og:image"
+          content=""
+      />
+
+      <!-- Twitter -->
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://www.ksagar.me/" />
+      <meta name="twitter:description" content="personal website for ksagar" />
+
+      <meta name="theme-color" content="#c4c0aa" />
+      <link rel="canonical" href="https://www.ksagar.me/" />
+  </head>
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#overview" id="toc-overview">Overview</a></li>
+<li><a href="#implementation-details"
+id="toc-implementation-details">Implementation Details</a></li>
+<li><a href="#full-code-example" id="toc-full-code-example">Full Code
+Example</a></li>
+<li><a href="#conclusion" id="toc-conclusion">Conclusion</a></li>
+<li><a href="#future-work" id="toc-future-work">Future Work</a></li>
+</ul>
+</nav>
+<h3 id="overview">Overview</h3>
+<ol type="1">
+<li><strong>Character State Definition:</strong> Define the state of the
+character as ([q, , r]), where (q) is the physical pose, () is the
+velocity (or derivative of pose), and (r) is the recurrent memory
+state.</li>
+<li><strong>Neural Network Control Policy:</strong> Introduce a neural
+network control policy (_: s a) that maps a sensory state (s) to an
+action (a).</li>
+<li><strong>Trajectory Rollout with MPPI:</strong> Use MPPI to generate
+trajectories and evaluate cost functions.</li>
+<li><strong>Supervised Learning with MPPI:</strong> Inject noise during
+training, use MPPI to generate trajectories and compute cost terms, and
+train the neural network in a supervised manner to learn from these
+rollouts.</li>
+<li><strong>Real-Time Policy Execution:</strong> Execute the learned
+policy in real-time for interactive control.</li>
+</ol>
+<p>this works for simple systems but for anything complex need to
+minimize KL between the trajectories and the policy</p>
+<h3 id="implementation-details">Implementation Details</h3>
+<h4 id="character-state-definition">1. Character State Definition</h4>
+<p>For simplicity, we’ll consider the state (s) of the character as ([q,
+]), as the recurrent memory (r) is internal to the neural network and
+does not need to be explicitly defined in every rollout.</p>
+<h4 id="neural-network-control-policy">2. Neural Network Control
+Policy</h4>
+<p>We will use a neural network to parameterize the control policy. This
+network will predict the control inputs given the current state.</p>
+<p>For this example, we will use a simple feedforward neural network
+with 3 hidden layers of 250 units each.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode jl"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Flux</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the neural network</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>nx <span class="op">=</span> model.nq <span class="op">+</span> model.nv  <span class="co"># State dimension</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>nu <span class="op">=</span> model.nu             <span class="co"># Action dimension</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>n_hidden <span class="op">=</span> <span class="fl">250</span>            <span class="co"># Hidden units per layer</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>policy_nn <span class="op">=</span> <span class="fu">Chain</span>(<span class="fu">Dense</span>(nx, n_hidden, tanh),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">Dense</span>(n_hidden, n_hidden, tanh),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">Dense</span>(n_hidden, n_hidden, tanh),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">Dense</span>(n_hidden, nu))          <span class="co"># Output layer for actions (controls)</span></span></code></pre></div>
+<h4 id="trajectory-rollout-with-mppi">3. Trajectory Rollout with
+MPPI</h4>
+<p>MPPI generates samples of trajectories by adding noise to the control
+actions and evaluates the cost for each rollout. Here’s how you can
+integrate MPPI into trajectory generation.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode jl"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">cost</span>(qpos, qvel, ctrl)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Same as before: weights and cost calculation logic</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    w_pos <span class="op">=</span> <span class="fl">1000.0</span>    <span class="co"># Position tracking</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    w_height <span class="op">=</span> <span class="fl">10.0</span>   <span class="co"># Height tracking</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    w_vel <span class="op">=</span> <span class="fl">10.0</span>      <span class="co"># Velocity tracking</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    w_ctrl <span class="op">=</span> <span class="fl">0.5</span>      <span class="co"># Control cost</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    target_height <span class="op">=</span> <span class="fl">0.45</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    target_vel_x <span class="op">=</span> <span class="fl">0.6</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    current_pos <span class="op">=</span> qpos[<span class="fl">1</span><span class="op">:</span><span class="fl">3</span>]</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    current_vel <span class="op">=</span> qvel[<span class="fl">1</span><span class="op">:</span><span class="fl">3</span>]</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    height_cost <span class="op">=</span> w_height <span class="op">*</span> (current_pos[<span class="fl">3</span>] <span class="op">-</span> target_height)<span class="op">^</span><span class="fl">2</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    vel_cost <span class="op">=</span> w_vel <span class="op">*</span> (current_vel[<span class="fl">1</span>] <span class="op">-</span> target_vel_x)<span class="op">^</span><span class="fl">2</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    lateral_cost <span class="op">=</span> w_pos <span class="op">*</span> (current_pos[<span class="fl">2</span>]<span class="op">^</span><span class="fl">2</span> <span class="op">+</span> current_vel[<span class="fl">2</span>]<span class="op">^</span><span class="fl">2</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    ctrl_cost <span class="op">=</span> w_ctrl <span class="op">*</span> <span class="fu">sum</span>(ctrl <span class="op">.^</span> <span class="fl">2</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    total_cost <span class="op">=</span> height_cost <span class="op">+</span> vel_cost <span class="op">+</span> lateral_cost <span class="op">+</span> ctrl_cost</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total_cost</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">rollout</span>(m<span class="op">::</span><span class="dt">Model</span>, d<span class="op">::</span><span class="dt">Data</span>, U<span class="op">::</span><span class="dt">Matrix{Float64}</span>, noise<span class="op">::</span><span class="dt">Array{Float64,3}</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    costs <span class="op">=</span> <span class="fu">zeros</span>(K)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="pp">@threads</span> <span class="cf">for</span> k <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>K</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>        d_copy <span class="op">=</span> <span class="fu">init_data</span>(m)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        d_copy.qpos <span class="op">.=</span> d.qpos</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>        d_copy.qvel <span class="op">.=</span> d.qvel</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>        cost_sum <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> t <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>H</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>            current_state <span class="op">=</span> [d_copy.qpos; d_copy.qvel]</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>            current_ctrl <span class="op">=</span> <span class="fu">vec</span>(U[<span class="op">:</span>, t] <span class="op">+</span> noise[<span class="op">:</span>, t, k])</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Clamp control inputs</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>            current_ctrl <span class="op">=</span> <span class="fu">clamp</span>.(current_ctrl, <span class="op">-</span><span class="fl">10.0</span>, <span class="fl">10.0</span>)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Query the policy network for desired action (controller injection)</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>            desired_ctrl <span class="op">=</span> <span class="fu">policy_nn</span>(current_state)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>            d_copy.ctrl <span class="op">.=</span> desired_ctrl</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>            <span class="fu">mj_step</span>(m, d_copy)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>            cost_sum <span class="op">+=</span> <span class="fu">cost</span>(d_copy.qpos, d_copy.qvel, d_copy.ctrl)</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        costs[k] <span class="op">=</span> cost_sum</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> costs</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">mppi_update!</span>(m<span class="op">::</span><span class="dt">Model</span>, d<span class="op">::</span><span class="dt">Data</span>)</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    noise <span class="op">=</span> <span class="fu">randn</span>(nu, H, K) <span class="op">*</span> Σ</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    costs <span class="op">=</span> <span class="fu">rollout</span>(m, d, U_global, noise)</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    β <span class="op">=</span> <span class="fu">minimum</span>(costs)</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    weights <span class="op">=</span> <span class="fu">exp</span>.(<span class="op">-</span><span class="fl">1</span> <span class="op">/</span> λ <span class="op">*</span> (costs <span class="op">.-</span> β))</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    weights <span class="op">./=</span> <span class="fu">sum</span>(weights) <span class="op">+</span> <span class="fl">1e-10</span></span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> t <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>H</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>        weighted_noise <span class="op">=</span> <span class="fu">sum</span>(weights[k] <span class="op">*</span> noise[<span class="op">:</span>, t, k] <span class="cf">for</span> k <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>K)</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>        U_global[<span class="op">:</span>, t] <span class="op">.=</span> <span class="fu">clamp</span>.(U_global[<span class="op">:</span>, t] <span class="op">+</span> weighted_noise, <span class="op">-</span><span class="fl">10.0</span>, <span class="fl">10.0</span>)</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>    d.ctrl <span class="op">.=</span> U_global[<span class="op">:</span>, <span class="fl">1</span>]</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    U_global[<span class="op">:</span>, <span class="fl">1</span><span class="op">:</span><span class="kw">end</span><span class="op">-</span><span class="fl">1</span>] <span class="op">.=</span> U_global[<span class="op">:</span>, <span class="fl">2</span><span class="op">:</span><span class="kw">end</span>]</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    U_global[<span class="op">:</span>, <span class="kw">end</span>] <span class="op">.=</span> <span class="fl">0.0</span></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
+<h4 id="supervised-learning-with-mppi">4. Supervised Learning with
+MPPI</h4>
+<p>Inject noise during training, leveraging MPPI for trajectory
+generation, and using supervised learning to train the neural
+network.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode jl"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Flux.Losses</span>: mse</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Flux.Optimise</span>: Optimiser, ADAM</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize optimizer</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>opt <span class="op">=</span> <span class="fu">ADAM</span>(<span class="fl">0.01</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Training loop</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20000</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate trajectory data with MPPI</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> trial <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">150</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        d.qpos <span class="op">=</span> initial_positions[trial]</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        d.qvel <span class="op">=</span> initial_velocities[trial]</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mppi_update!</span>(model, d)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Prepare dataset from trajectories</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> <span class="fu">zeros</span>(nx, H, <span class="fl">150</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    Y <span class="op">=</span> <span class="fu">zeros</span>(nu, H, <span class="fl">150</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> trial <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">150</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        d_copy <span class="op">=</span> <span class="fu">init_data</span>(model)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        d_copy.qpos <span class="op">.=</span> initial_positions[trial]</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>        d_copy.qvel <span class="op">.=</span> initial_velocities[trial]</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> t <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>H</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>            current_state <span class="op">=</span> [d_copy.qpos; d_copy.qvel]</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>            desired_ctrl <span class="op">=</span> <span class="fu">policy_nn</span>(current_state)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Store the sensory state and action for training</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>            X[<span class="op">:</span>, t, trial] <span class="op">=</span> current_state</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>            Y[<span class="op">:</span>, t, trial] <span class="op">=</span> desired_ctrl</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Update the state with noisy control</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>            noisy_ctrl <span class="op">=</span> <span class="fu">clamp</span>.(desired_ctrl <span class="op">+</span> Σ <span class="op">*</span> <span class="fu">randn</span>(nu), <span class="op">-</span><span class="fl">10.0</span>, <span class="fl">10.0</span>)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>            d_copy.ctrl <span class="op">.=</span> noisy_ctrl</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>            <span class="fu">mj_step</span>(model, d_copy)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Train the neural network with the generated data</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> <span class="fu">sum</span>(<span class="fu">mse</span>(<span class="fu">policy_nn</span>(X[<span class="op">:</span>, t, trial]), Y[<span class="op">:</span>, t, trial]) <span class="cf">for</span> trial <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">150</span>, t <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>H) <span class="op">/</span> (<span class="fl">150</span> <span class="op">*</span> H)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    Flux.<span class="fu">train!</span>(loss, Flux.<span class="fu">params</span>(policy_nn), opt)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">&quot;Epoch </span><span class="sc">$</span>(epoch)<span class="st">, Loss: </span><span class="sc">$</span>(loss)<span class="st">&quot;</span>)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
+<h4 id="real-time-policy-execution">5. Real-Time Policy Execution</h4>
+<p>The trained policy can then be used for real-time interactive
+control.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode jl"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">real_time_controller</span>(m<span class="op">::</span><span class="dt">Model</span>, d<span class="op">::</span><span class="dt">Data</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    current_state <span class="op">=</span> [d.qpos; d.qvel]</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    desired_ctrl <span class="op">=</span> <span class="fu">policy_nn</span>(current_state)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">clamp</span>.(desired_ctrl, <span class="op">-</span><span class="fl">10.0</span>, <span class="fl">10.0</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">init_visualiser</span>()</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">visualise!</span>(model, data; controller<span class="op">=</span>real_time_controller)</span></code></pre></div>
+<h3 id="full-code-example">Full Code Example</h3>
+<p>Combining all the components together, here’s the full training and
+execution pipeline using MPPI and a neural network policy.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode jl"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">MuJoCo</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">LinearAlgebra</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Random</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Statistics</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Flux</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Base.Threads</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the model</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> <span class="fu">load_model</span>(<span class="st">&quot;models/unitree_go1/scene.xml&quot;</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> <span class="fu">init_data</span>(model)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># MPPI Parameters</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> K <span class="op">=</span> <span class="fl">50</span>  <span class="co"># Number of samples</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> H <span class="op">=</span> <span class="fl">30</span>  <span class="co"># Horizon length</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> λ <span class="op">=</span> <span class="fl">0.2</span> <span class="co"># Temperature</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> Σ <span class="op">=</span> <span class="fl">0.3</span> <span class="co"># Noise standard deviation</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>nx <span class="op">=</span> model.nq <span class="op">+</span> model.nv  <span class="co"># State dimension</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>nu <span class="op">=</span> model.nu             <span class="co"># Action dimension</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>n_hidden <span class="op">=</span> <span class="fl">250</span>            <span class="co"># Hidden units per layer</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the neural network policy</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>policy_nn <span class="op">=</span> <span class="fu">Chain</span>(<span class="fu">Dense</span>(nx, n_hidden, tanh),</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">Dense</span>(n_hidden, n_hidden, tanh),</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">Dense</span>(n_hidden, n_hidden, tanh),</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">Dense</span>(n_hidden, nu))</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize optimizer</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>opt <span class="op">=</span> <span class="fu">ADAM</span>(<span class="fl">0.01</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> U_global <span class="op">=</span> <span class="fu">zeros</span>(nu, H)</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Cost function</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">cost</span>(qpos, qvel, ctrl)</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    w_pos <span class="op">=</span> <span class="fl">1000.0</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    w_height <span class="op">=</span> <span class="fl">10.0</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    w_vel <span class="op">=</span> <span class="fl">10.0</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    w_ctrl <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    target_height <span class="op">=</span> <span class="fl">0.45</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    target_vel_x <span class="op">=</span> <span class="fl">0.6</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    current_pos <span class="op">=</span> qpos[<span class="fl">1</span><span class="op">:</span><span class="fl">3</span>]</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    current_vel <span class="op">=</span> qvel[<span class="fl">1</span><span class="op">:</span><span class="fl">3</span>]</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    height_cost <span class="op">=</span> w_height <span class="op">*</span> (current_pos[<span class="fl">3</span>] <span class="op">-</span> target_height)<span class="op">^</span><span class="fl">2</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    vel_cost <span class="op">=</span> w_vel <span class="op">*</span> (current_vel[<span class="fl">1</span>] <span class="op">-</span> target_vel_x)<span class="op">^</span><span class="fl">2</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    lateral_cost <span class="op">=</span> w_pos <span class="op">*</span> (current_pos[<span class="fl">2</span>]<span class="op">^</span><span class="fl">2</span> <span class="op">+</span> current_vel[<span class="fl">2</span>]<span class="op">^</span><span class="fl">2</span>)</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    ctrl_cost <span class="op">=</span> w_ctrl <span class="op">*</span> <span class="fu">sum</span>(ctrl <span class="op">.^</span> <span class="fl">2</span>)</span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    total_cost <span class="op">=</span> height_cost <span class="op">+</span> vel_cost <span class="op">+</span> lateral_cost <span class="op">+</span> ctrl_cost</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> total_cost</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a><span class="co"># Rollout function using noise and neural network policy</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">rollout</span>(m<span class="op">::</span><span class="dt">Model</span>, d<span class="op">::</span><span class="dt">Data</span>, U<span class="op">::</span><span class="dt">Matrix{Float64}</span>, noise<span class="op">::</span><span class="dt">Array{Float64,3}</span>)</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    costs <span class="op">=</span> <span class="fu">zeros</span>(K)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>    <span class="pp">@threads</span> <span class="cf">for</span> k <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>K</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>        d_copy <span class="op">=</span> <span class="fu">init_data</span>(m)</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>        d_copy.qpos <span class="op">.=</span> d.qpos</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>        d_copy.qvel <span class="op">.=</span> d.qvel</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>        cost_sum <span class="op">=</span> <span class="fl">0.0</span></span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> t <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>H</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>            current_state <span class="op">=</span> [d_copy.qpos; d_copy.qvel]</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>            current_ctrl <span class="op">=</span> <span class="fu">vec</span>(U[<span class="op">:</span>, t] <span class="op">+</span> noise[<span class="op">:</span>, t, k])</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Clamp control inputs</span></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a>            current_ctrl <span class="op">=</span> <span class="fu">clamp</span>.(current_ctrl, <span class="op">-</span><span class="fl">10.0</span>, <span class="fl">10.0</span>)</span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-71"><a href="#cb5-71" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Query the policy network for desired action (controller injection)</span></span>
+<span id="cb5-72"><a href="#cb5-72" aria-hidden="true" tabindex="-1"></a>            desired_ctrl <span class="op">=</span> <span class="fu">policy_nn</span>(current_state)</span>
+<span id="cb5-73"><a href="#cb5-73" aria-hidden="true" tabindex="-1"></a>            d_copy.ctrl <span class="op">.=</span> desired_ctrl</span>
+<span id="cb5-74"><a href="#cb5-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-75"><a href="#cb5-75" aria-hidden="true" tabindex="-1"></a>            <span class="fu">mj_step</span>(m, d_copy)</span>
+<span id="cb5-76"><a href="#cb5-76" aria-hidden="true" tabindex="-1"></a>            cost_sum <span class="op">+=</span> <span class="fu">cost</span>(d_copy.qpos, d_copy.qvel, d_copy.ctrl)</span>
+<span id="cb5-77"><a href="#cb5-77" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb5-78"><a href="#cb5-78" aria-hidden="true" tabindex="-1"></a>        costs[k] <span class="op">=</span> cost_sum</span>
+<span id="cb5-79"><a href="#cb5-79" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb5-80"><a href="#cb5-80" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> costs</span>
+<span id="cb5-81"><a href="#cb5-81" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span>
+<span id="cb5-82"><a href="#cb5-82" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-83"><a href="#cb5-83" aria-hidden="true" tabindex="-1"></a><span class="co"># MPPI update function</span></span>
+<span id="cb5-84"><a href="#cb5-84" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">mppi_update!</span>(m<span class="op">::</span><span class="dt">Model</span>, d<span class="op">::</span><span class="dt">Data</span>)</span>
+<span id="cb5-85"><a href="#cb5-85" aria-hidden="true" tabindex="-1"></a>    noise <span class="op">=</span> <span class="fu">randn</span>(nu, H, K) <span class="op">*</span> Σ</span>
+<span id="cb5-86"><a href="#cb5-86" aria-hidden="true" tabindex="-1"></a>    costs <span class="op">=</span> <span class="fu">rollout</span>(m, d, U_global, noise)</span>
+<span id="cb5-87"><a href="#cb5-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-88"><a href="#cb5-88" aria-hidden="true" tabindex="-1"></a>    β <span class="op">=</span> <span class="fu">minimum</span>(costs)</span>
+<span id="cb5-89"><a href="#cb5-89" aria-hidden="true" tabindex="-1"></a>    weights <span class="op">=</span> <span class="fu">exp</span>.(<span class="op">-</span><span class="fl">1</span> <span class="op">/</span> λ <span class="op">*</span> (costs <span class="op">.-</span> β))</span>
+<span id="cb5-90"><a href="#cb5-90" aria-hidden="true" tabindex="-1"></a>    weights <span class="op">./=</span> <span class="fu">sum</span>(weights) <span class="op">+</span> <span class="fl">1e-10</span>  <span class="co"># Normalize weights</span></span>
+<span id="cb5-91"><a href="#cb5-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-92"><a href="#cb5-92" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> t <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>H</span>
+<span id="cb5-93"><a href="#cb5-93" aria-hidden="true" tabindex="-1"></a>        weighted_noise <span class="op">=</span> <span class="fu">sum</span>(weights[k] <span class="op">*</span> noise[<span class="op">:</span>, t, k] <span class="cf">for</span> k <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>K)</span>
+<span id="cb5-94"><a href="#cb5-94" aria-hidden="true" tabindex="-1"></a>        U_global[<span class="op">:</span>, t] <span class="op">.=</span> <span class="fu">clamp</span>.(U_global[<span class="op">:</span>, t] <span class="op">+</span> weighted_noise, <span class="op">-</span><span class="fl">10.0</span>, <span class="fl">10.0</span>)</span>
+<span id="cb5-95"><a href="#cb5-95" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb5-96"><a href="#cb5-96" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-97"><a href="#cb5-97" aria-hidden="true" tabindex="-1"></a>    d.ctrl <span class="op">.=</span> U_global[<span class="op">:</span>, <span class="fl">1</span>]</span>
+<span id="cb5-98"><a href="#cb5-98" aria-hidden="true" tabindex="-1"></a>    U_global[<span class="op">:</span>, <span class="fl">1</span><span class="op">:</span><span class="kw">end</span><span class="op">-</span><span class="fl">1</span>] <span class="op">.=</span> U_global[<span class="op">:</span>, <span class="fl">2</span><span class="op">:</span><span class="kw">end</span>]</span>
+<span id="cb5-99"><a href="#cb5-99" aria-hidden="true" tabindex="-1"></a>    U_global[<span class="op">:</span>, <span class="kw">end</span>] <span class="op">.=</span> <span class="fl">0.0</span></span>
+<span id="cb5-100"><a href="#cb5-100" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb5-101"><a href="#cb5-101" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-102"><a href="#cb5-102" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate dataset for training (this step can be more sophisticated)</span></span>
+<span id="cb5-103"><a href="#cb5-103" aria-hidden="true" tabindex="-1"></a>initial_positions <span class="op">=</span> [d.qpos for _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">150</span>]</span>
+<span id="cb5-104"><a href="#cb5-104" aria-hidden="true" tabindex="-1"></a>initial_velocities <span class="op">=</span> [d.qvel for _ <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">150</span>]</span>
+<span id="cb5-105"><a href="#cb5-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-106"><a href="#cb5-106" aria-hidden="true" tabindex="-1"></a><span class="co"># Training loop</span></span>
+<span id="cb5-107"><a href="#cb5-107" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">20000</span></span>
+<span id="cb5-108"><a href="#cb5-108" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generate trajectory data with MPPI</span></span>
+<span id="cb5-109"><a href="#cb5-109" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> trial <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">150</span></span>
+<span id="cb5-110"><a href="#cb5-110" aria-hidden="true" tabindex="-1"></a>        d.qpos <span class="op">=</span> initial_positions[trial]</span>
+<span id="cb5-111"><a href="#cb5-111" aria-hidden="true" tabindex="-1"></a>        d.qvel <span class="op">=</span> initial_velocities[trial]</span>
+<span id="cb5-112"><a href="#cb5-112" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-113"><a href="#cb5-113" aria-hidden="true" tabindex="-1"></a>        <span class="fu">mppi_update!</span>(model, d)</span>
+<span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb5-115"><a href="#cb5-115" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-116"><a href="#cb5-116" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Prepare dataset from trajectories</span></span>
+<span id="cb5-117"><a href="#cb5-117" aria-hidden="true" tabindex="-1"></a>    X <span class="op">=</span> <span class="fu">zeros</span>(nx, H, <span class="fl">150</span>)</span>
+<span id="cb5-118"><a href="#cb5-118" aria-hidden="true" tabindex="-1"></a>    Y <span class="op">=</span> <span class="fu">zeros</span>(nu, H, <span class="fl">150</span>)</span>
+<span id="cb5-119"><a href="#cb5-119" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> trial <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">150</span></span>
+<span id="cb5-120"><a href="#cb5-120" aria-hidden="true" tabindex="-1"></a>        d_copy <span class="op">=</span> <span class="fu">init_data</span>(model)</span>
+<span id="cb5-121"><a href="#cb5-121" aria-hidden="true" tabindex="-1"></a>        d_copy.qpos <span class="op">.=</span> initial_positions[trial]</span>
+<span id="cb5-122"><a href="#cb5-122" aria-hidden="true" tabindex="-1"></a>        d_copy.qvel <span class="op">.=</span> initial_velocities[trial]</span>
+<span id="cb5-123"><a href="#cb5-123" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-124"><a href="#cb5-124" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> t <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>H</span>
+<span id="cb5-125"><a href="#cb5-125" aria-hidden="true" tabindex="-1"></a>            current_state <span class="op">=</span> [d_copy.qpos; d_copy.qvel]</span>
+<span id="cb5-126"><a href="#cb5-126" aria-hidden="true" tabindex="-1"></a>            desired_ctrl <span class="op">=</span> <span class="fu">policy_nn</span>(current_state)</span>
+<span id="cb5-127"><a href="#cb5-127" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-128"><a href="#cb5-128" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Store the sensory state and action for training</span></span>
+<span id="cb5-129"><a href="#cb5-129" aria-hidden="true" tabindex="-1"></a>            X[<span class="op">:</span>, t, trial] <span class="op">=</span> current_state</span>
+<span id="cb5-130"><a href="#cb5-130" aria-hidden="true" tabindex="-1"></a>            Y[<span class="op">:</span>, t, trial] <span class="op">=</span> desired_ctrl</span>
+<span id="cb5-131"><a href="#cb5-131" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-132"><a href="#cb5-132" aria-hidden="true" tabindex="-1"></a>            <span class="co"># Update the state with noisy control</span></span>
+<span id="cb5-133"><a href="#cb5-133" aria-hidden="true" tabindex="-1"></a>            noisy_ctrl <span class="op">=</span> <span class="fu">clamp</span>.(desired_ctrl <span class="op">+</span> Σ <span class="op">*</span> <span class="fu">randn</span>(nu), <span class="op">-</span><span class="fl">10.0</span>, <span class="fl">10.0</span>)</span>
+<span id="cb5-134"><a href="#cb5-134" aria-hidden="true" tabindex="-1"></a>            d_copy.ctrl <span class="op">.=</span> noisy_ctrl</span>
+<span id="cb5-135"><a href="#cb5-135" aria-hidden="true" tabindex="-1"></a>            <span class="fu">mj_step</span>(model, d_copy)</span>
+<span id="cb5-136"><a href="#cb5-136" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
+<span id="cb5-137"><a href="#cb5-137" aria-hidden="true" tabindex="-1"></a>    <span class="cf">end</span></span>
+<span id="cb5-138"><a href="#cb5-138" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-139"><a href="#cb5-139" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Train the neural network with the generated data</span></span>
+<span id="cb5-140"><a href="#cb5-140" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> <span class="fu">sum</span>(<span class="fu">mse</span>(<span class="fu">policy_nn</span>(X[<span class="op">:</span>, t, trial]), Y[<span class="op">:</span>, t, trial]) <span class="cf">for</span> trial <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">150</span>, t <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span>H) <span class="op">/</span> (<span class="fl">150</span> <span class="op">*</span> H)</span>
+<span id="cb5-141"><a href="#cb5-141" aria-hidden="true" tabindex="-1"></a>    Flux.<span class="fu">train!</span>(loss, Flux.<span class="fu">params</span>(policy_nn), opt)</span>
+<span id="cb5-142"><a href="#cb5-142" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">&quot;Epoch </span><span class="sc">$</span>(epoch)<span class="st">, Loss: </span><span class="sc">$</span>(loss)<span class="st">&quot;</span>)</span>
+<span id="cb5-143"><a href="#cb5-143" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb5-144"><a href="#cb5-144" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-145"><a href="#cb5-145" aria-hidden="true" tabindex="-1"></a><span class="co"># Real-time controller function</span></span>
+<span id="cb5-146"><a href="#cb5-146" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">real_time_controller</span>(m<span class="op">::</span><span class="dt">Model</span>, d<span class="op">::</span><span class="dt">Data</span>)</span>
+<span id="cb5-147"><a href="#cb5-147" aria-hidden="true" tabindex="-1"></a>    current_state <span class="op">=</span> [d.qpos; d.qvel]</span>
+<span id="cb5-148"><a href="#cb5-148" aria-hidden="true" tabindex="-1"></a>    desired_ctrl <span class="op">=</span> <span class="fu">policy_nn</span>(current_state)</span>
+<span id="cb5-149"><a href="#cb5-149" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">clamp</span>.(desired_ctrl, <span class="op">-</span><span class="fl">10.0</span>, <span class="fl">10.0</span>)</span>
+<span id="cb5-150"><a href="#cb5-150" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span>
+<span id="cb5-151"><a href="#cb5-151" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-152"><a href="#cb5-152" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize and evaluate the trained policy</span></span>
+<span id="cb5-153"><a href="#cb5-153" aria-hidden="true" tabindex="-1"></a><span class="fu">init_visualiser</span>()</span>
+<span id="cb5-154"><a href="#cb5-154" aria-hidden="true" tabindex="-1"></a><span class="fu">visualise!</span>(model, data; controller<span class="op">=</span>real_time_controller)</span></code></pre></div>
+<h3 id="conclusion">Conclusion</h3>
+<p>This implementation leverages MPPI for trajectory generation during
+training, allowing the neural network to learn from optimal but noisy
+control inputs. By injecting noise, the method prevents overfitting and
+ensures generalization. The real-time controller uses the learned neural
+network policy to interactively control the character, achieving complex
+and stable behaviors.</p>
+<h3 id="future-work">Future Work</h3>
+<ul>
+<li><strong>Adaptive MPC:</strong> Consider adding adaptive features to
+the MPC to better handle different terrains and perturbations.</li>
+<li><strong>Learning from Perturbations:</strong> Incorporate learning
+from unexpected changes in the task specification and handle
+perturbations due to noise and modeling errors.</li>
+<li><strong>Diverse Characters:</strong> Experiment with different
+character morphologies and extend the method to cover more diverse
+behaviors, such as swimming and flying.</li>
+</ul>
+<p>This hybrid approach of MPPI and neural networks promises robust and
+versatile controllers for interactive character control tasks.</p>
+</body>
+</html>
