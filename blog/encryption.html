@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>list</title>
+  <title>encryption</title>
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -54,41 +54,33 @@
   </head>
 </head>
 <body>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#blogs" id="toc-blogs">blogs</a>
-<ul>
-<li><a href="#writings" id="toc-writings">writings</a></li>
-<li><a href="#notes" id="toc-notes">notes</a></li>
-<li><a href="#evergreen" id="toc-evergreen">evergreen</a></li>
-</ul></li>
-</ul>
-</nav>
-<h1 id="blogs">blogs</h1>
-<p>ideas, writings, notes, and everything nice</p>
-<h2 id="writings">writings</h2>
-<ul>
-<li><a href="../blog/research.html">Independent Research</a>
-<ul>
-<li>July 20 2024</li>
-</ul></li>
-<li><a href="../blog/encryption.html">sih experience</a>
-<ul>
-<li>Dec 22 2024</li>
-</ul></li>
-</ul>
-<h2 id="notes">notes</h2>
-<ul>
-<li><a href="../blog/vpg.html">Vanilla Policy Gradient</a>
-<ul>
-<li>Sept 18 2024</li>
-</ul></li>
-</ul>
-<h2 id="evergreen">evergreen</h2>
-<ul>
-<li><a href="../blog/friends.html">friends</a></li>
-<li><a href="../blog/thought.html">thoughts posting</a></li>
-</ul>
+<p>we were tasked to “develop a functional solution that demonstrates
+the hardware-enabled root of trust.” basically, we needed to create a
+method to ensure that the authentication request for uidai app-based
+face authentication comes from a trusted source and ensure that the data
+doesn’t get breached unlawfully by anyone. they were currently using a
+network call for encryption (wtf), so we had to implement on-device
+encryption for the same.</p>
+<p>for this, we built a cross-platform app that could do all that, and
+as an added bonus, we demonstrated the loopholes we found in their
+current infrastructure and what could be done to prevent attackers from
+getting unauthorized access. a few quirks were that we had to generate
+keys that are unique to the user’s smartphone. also, everything <em>had
+to be on device</em> - not a single network call. we used technologies
+like ecc for asymmetric cryptography, other goodies like aes, and our
+solution as a whole had so many quirks it was hilarious.</p>
+<p>we built the entire infrastructure, cross-platform apps, system,
+testing, demo, penetration testing, network testing - all in 5 days.</p>
+<p>during this project, i spammed claude for help with everything from
+learning how to set up emulators on my macbook, understanding how ecc
+works, to figuring out how to break into the current system and how
+fail-safe our proposed system was.</p>
+<p>to summarize, i would recommend learning how to learn and how to use
+these large transformers - they enable learning quickly and fast,
+cutting down on the bs to get to the finish line faster. i would not be
+able to learn and do so much in such a short time, but i was able to
+thanks to claude sonnet 3.5 (new) for teaching me and qwq 32b for
+writing all the code</p>
 <p><a href="../index.html">home</a></p>
 </body>
 </html>

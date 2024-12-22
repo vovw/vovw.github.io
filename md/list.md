@@ -6,6 +6,8 @@ ideas, writings, notes, and everything nice
 - [Independent Research](../blog/research.html)
   - July 20 2024
 
+- [sih experience](../blog/encryption.html)
+  - Dec 22 2024
 
 
 ## notes
