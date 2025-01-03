@@ -12,7 +12,7 @@
 | | Hackathon Wins | 6x First Place (Finance, Security, Embedded) |
 | | Gaming Achievement | Prev Top 100 National Clash Royale Player |
 | **Business** | [Robot Kit Business](https://sravjti.in/) | ₹50,000+ Revenue, Taught 20k+ Students |
-| **Technical Impact** | Online Presence | [Website](https://ksagar.me), [GitHub](https://github.com/vovw) - 15M+ Impressions |
+| **Technical Impact** | social profiles | [x/twitter](https://x.com/k7agar), [Website](https://ksagar.site), [GitHub](https://github.com/vovw) - 15M+ Impressions |
 | **Major Projects** | UIDAI Authentication| Hardware-backed system for 1.3B users |
 | | [EMG Armband](https://github.com/vovw/emgband) | Benefited 40+ amputees |
 | | [MPPI Control](https://github.com/vovw/mppi) | SOTA in control evaluations |
