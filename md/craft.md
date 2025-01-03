@@ -1,4 +1,8 @@
-[📧 k7agar@proton.me](mailto:k7agar@proton.me) | [🔗 GitHub](https://github.com/vovw) | [🌐 Website](https://ksagar.me)
+[📧 k7agar@proton.me](mailto:k7agar@proton.me) | [git](https://github.com/vovw) | [ksagar.site](https://ksagar.site)
+
+- A generalist, craftsman, engineer, and cat photographer; I consider myself many things.
+- I take pride in my speed and believe one can change the world.
+- Technology is fundamentally the most important thing you can work on.
 
 ## Proof of Work
 
@@ -22,4 +26,7 @@
 | **Core Skills** | Systems Programming, Robotics, Security, API Design, Deep RL |
 | **Libraries** | [PyTorch](https://pytorch.org/), [JAX](https://github.com/google/jax), [MLX](https://github.com/ml-explore/mlx) |
 | **Tools** | [React](https://reactjs.org/), [FastAPI](https://fastapi.tiangolo.com/), [Git](https://git-scm.com/), Linux, [Neovim](https://neovim.io/), [tmux](https://github.com/tmux/tmux), [Zed](https://zed.dev/) |
+
+
+
 
