@@ -1,104 +1,181 @@
 body {
-    background: #f4f1de;
-    color: #2f2f2f;
-    font-family: "Georgia", serif;
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 0 20px;
-    line-height: 1.6;
-    font-size: 1.2em;
+    background: #f5f5dc; /* Light brown/beige background */
+    color: #4b2e2e; /* Dark brown text color */
+    font-family: "Georgia", serif; /* More classic serif font */
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 40px;
+    line-height: 1.6; /* Slightly increased line height for readability */
+    font-size: 12pt;
     box-sizing: border-box;
 }
 
 .content-wrapper {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-    margin-top: 2em;
+    display: block;
+    margin-top: 3em;
 }
 
 .text-content {
-    flex: 2;
+    width: 100%;
 }
 
+/* Figure styling */
 .image-container {
-    flex: 1;
-    top: 20px;
+    float: left;
+    width: 45%;
+    margin: 0 20px 20px 0;
+    padding: 10px;
+    border: 1px solid #000;
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
 .profile-image {
     width: 100%;
-    max-width: 300px;
-    border: 3px solid #2f2f2f;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Content boxes */
+.section-box {
+    border: 1px solid #000;
+    padding: 15px;
+    margin: 20px 0;
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
 }
 
 h2 {
-    font-family: "Times New Roman", serif;
+    font-family: "Georgia", serif;
     font-weight: bold;
-    margin: 20px 0;
-    color: #2f2f2f;
-    border-bottom: 2px solid #2f2f2f;
+    font-size: 16pt; /* Slightly larger font size for headings */
+    margin: 2em 0 1em 0;
+    color: #4b2e2e; /* Dark brown text color */
+    border-bottom: 2px solid #4b2e2e; /* Dark brown border */
     padding-bottom: 5px;
 }
 
-p,
-div,
-ul,
-table {
-    margin-bottom: 20px;
+p {
+    margin-bottom: 1em;
+    text-align: justify;
+    text-indent: 2em;
+    color: #4b2e2e; /* Dark brown text color */
 }
 
-table, td,th {
-    border: 1px solid black;
+div, ul, table {
+    margin-bottom: 1.5em;
+}
+
+table {
+    width: 100%;
+    border: 2px solid black;
     border-collapse: collapse;
+    margin: 2em 0;
+    font-size: 10pt;
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f8f8f8;
+    border-bottom: 2px solid black;
 }
 
 li {
-    margin: 0 0 10px 20px;
-    list-style: square;
+    margin: 0 0 0.5em 2em;
+    list-style: decimal;
+    text-align: justify;
 }
 
 a {
-    color: #2f2f2f;
+    color: #8b4513; /* Saddle brown for links */
     text-decoration: none;
-    border-bottom: 2px solid #2f2f2f;
-    padding-bottom: 1px;
-    transition: all 0.3s ease;
 }
 
 a:hover {
-    background-color: #2f2f2f;
-    color: #f4f1de;
+    text-decoration: underline;
 }
 
 hr {
     border: none;
-    border-top: 2px solid #2f2f2f;
-    margin: 20px 0;
+    border-top: 2px solid #4b2e2e; /* Dark brown border */
+    margin: 2em 0;
 }
 
 nav {
-    font-family: "Courier New", monospace;
-    margin-top: 20px;
+    font-family: "Georgia", serif;
+    margin-top: 2em;
+    text-align: center;
+    color: #4b2e2e; /* Dark brown text color */
+}
+
+/* Figure captions */
+.figure-caption {
+    font-size: 10pt;
+    text-align: center;
+    margin-top: 0.5em;
+    font-style: italic;
+    color: #4b2e2e; /* Dark brown text color */
+}
+
+/* Abstract section */
+.abstract {
+    margin: 2em 0;
+    font-size: 11pt;
+    border: 2px solid #4b2e2e; /* Dark brown border */
+    padding: 20px;
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    color: #4b2e2e; /* Dark brown text color */
+}
+
+.abstract-title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1em;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+
+/* References section */
+.references {
+    margin-top: 3em;
+    border: 1px solid #4b2e2e; /* Dark brown border */
+    padding: 20px;
+    background: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    color: #4b2e2e; /* Dark brown text color */
+}
+
+.references li {
+    padding-left: 2em;
+    text-indent: -2em;
+    list-style: none;
+    margin-bottom: 1em;
+}
+
+/* Clear fix for floating images */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 @media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column;
-    }
-
-    .image-container {
-        order: -1;
-        margin-bottom: 20px;
-    }
-
     body {
-        font-size: 1.1em;
+        padding: 0 20px;
+        font-size: 11pt;
     }
-
-    .profile-image {
-        max-width: 200px;
-        margin: 0 auto;
-        display: block;
+    
+    .image-container {
+        float: none;
+        width: 100%;
+        margin: 20px 0;
     }
 }
