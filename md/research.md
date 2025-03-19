@@ -1,16 +1,21 @@
 # Why Independent Research is Hard
 
+Description: Why Independent Research is Hard
+
+
+
+
+
 I have been doing independent research for the last ~8 months at this point. (Independent research *for me* is the practice of working on a problem and trying to find novel ways to solve it solo[^1])
 
 ## Current Research Focus
 
 I've been working on a few problems for the past few months, namely:
 
-- Multilingual voice assistants/agents
+- Better, faster, efficent Robotics systems.
 - World models or state predicting models for robotics navigation
 - Language models and their use in helping humans solve difficult problems
 - Fast inference of large models on local hardware
-- Better, faster, efficent Robotics systems.
 
 *PS: If you're an individual or a lab working on this, please slide into my DMs.*
 
@@ -59,4 +64,3 @@ Now here comes advantages of being a lone wolf (I had to) researcher:
 [^4]: I realized this really late, but now I spam Twitter and emails.
 [^5]: UW grads, startup consultants who are masters of their craft, people who eat startups in a weekend.
 
-[home](../index.html)

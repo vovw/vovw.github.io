@@ -1,3 +1,12 @@
+# possible bangers
+
+Date: Mar 19, 2025
+Description: possible bangers
+
+
+
+
+
 ## some of my non technical posts i really like
 - [failure](https://x.com/k7agar/status/1795354727284433325)
 - [networking](https://x.com/k7agar/status/1808922356007538941)
@@ -10,13 +19,3 @@
 - [information consumption](https://x.com/k7agar/status/1803910740488917170)
 - [superior software](https://x.com/k7agar/status/1803901469910876579)
 - [modern computers](https://x.com/k7agar/status/1802399290620367008)
-
-
-## hard images
-
-- [desk](https://x.com/k7agar/status/1818298718438998381)
-- [7 hr sprints](https://x.com/k7agar/status/1816878949999230988)
-
-
-
-[home](../index.html)

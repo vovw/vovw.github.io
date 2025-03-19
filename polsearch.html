@@ -1,165 +1,200 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>polsearch</title>
-  <style>
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      {  background-color: #f8f8f8; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span.al { color: #ef2929; } /* Alert */
-    code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #204a87; } /* Attribute */
-    code span.bn { color: #0000cf; } /* BaseN */
-    code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4e9a06; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #8f5902; font-style: italic; } /* Comment */
-    code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
-    code span.dt { color: #204a87; } /* DataType */
-    code span.dv { color: #0000cf; } /* DecVal */
-    code span.er { color: #a40000; font-weight: bold; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #0000cf; } /* Float */
-    code span.fu { color: #204a87; font-weight: bold; } /* Function */
-    code span.im { } /* Import */
-    code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
-    code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
-    code span.ot { color: #8f5902; } /* Other */
-    code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
-    code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
-    code span.ss { color: #4e9a06; } /* SpecialString */
-    code span.st { color: #4e9a06; } /* String */
-    code span.va { color: #000000; } /* Variable */
-    code span.vs { color: #4e9a06; } /* VerbatimString */
-    code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
-  </style>
-  <link rel="stylesheet" href="/dev/fd/63" />
-  <head>
-      <link rel="stylesheet" type="text/css" href="../style.css" />
-      <link rel="icon" type="image/png" href="cat.png" />
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Policy learning</title>
+        <meta
+            name="description"
+            content=""
+        />
+        <link rel="stylesheet" href="style.css" />
+                <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+                        <style type="text/css">
+            html { -webkit-text-size-adjust: 100%; }
+            pre > code.sourceCode { white-space: pre; position: relative; }
+            pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+            pre > code.sourceCode > span:empty { height: 1.2em; }
+            .sourceCode { overflow: visible; }
+            code.sourceCode > span { color: inherit; text-decoration: inherit; }
+            div.sourceCode { margin: 1em 0; }
+            pre.sourceCode { margin: 0; }
+            @media screen {
+            div.sourceCode { overflow: auto; }
+            }
+            @media print {
+            pre > code.sourceCode { white-space: pre-wrap; }
+            pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+            }
+            pre.numberSource code
+              { counter-reset: source-line 0; }
+            pre.numberSource code > span
+              { position: relative; left: -4em; counter-increment: source-line; }
+            pre.numberSource code > span > a:first-child::before
+              { content: counter(source-line);
+                position: relative; left: -1em; text-align: right; vertical-align: baseline;
+                border: none; display: inline-block;
+                -webkit-touch-callout: none; -webkit-user-select: none;
+                -khtml-user-select: none; -moz-user-select: none;
+                -ms-user-select: none; user-select: none;
+                padding: 0 4px; width: 4em;
+                color: #aaaaaa;
+              }
+            pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+            div.sourceCode
+              {  background-color: #f8f8f8; }
+            @media screen {
+            pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+            }
+            code span.al { color: #ef2929; } /* Alert */
+            code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+            code span.at { color: #204a87; } /* Attribute */
+            code span.bn { color: #0000cf; } /* BaseN */
+            code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+            code span.ch { color: #4e9a06; } /* Char */
+            code span.cn { color: #8f5902; } /* Constant */
+            code span.co { color: #8f5902; font-style: italic; } /* Comment */
+            code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+            code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+            code span.dt { color: #204a87; } /* DataType */
+            code span.dv { color: #0000cf; } /* DecVal */
+            code span.er { color: #a40000; font-weight: bold; } /* Error */
+            code span.ex { } /* Extension */
+            code span.fl { color: #0000cf; } /* Float */
+            code span.fu { color: #204a87; font-weight: bold; } /* Function */
+            code span.im { } /* Import */
+            code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+            code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+            code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+            code span.ot { color: #8f5902; } /* Other */
+            code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+            code span.sc { color: #ce5c00; font-weight: bold; } /* SpecialChar */
+            code span.ss { color: #4e9a06; } /* SpecialString */
+            code span.st { color: #4e9a06; } /* String */
+            code span.va { color: #000000; } /* Variable */
+            code span.vs { color: #4e9a06; } /* VerbatimString */
+            code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+        </style>
+            </head>
+    <body>
+        <div class="container">
+            <header>
+                <div class="profile">
+                    <a href="index.html">
+                        <img
+                            src="athu.jpg"
+                            alt="atharva's photo"
+                            class="profile-img"
+                        />
+                        <h1 class="site-title">KSAGAR.SITE</h1>
+                    </a>
+                </div>
+                <nav class="nav-links">
+                    <a
+                        href="index.html"
+                        class="nav-link "
+                        >about</a
+                    >
+                    <a
+                        href="blog.html"
+                        class="nav-link active"
+                        >blog</a
+                    >
+                    <a
+                        href="uses.html"
+                        class="nav-link "
+                        >uses</a
+                    >
+                    <a
+                        href="media.html"
+                        class="nav-link "
+                        >media</a
+                    >
+                </nav>
+            </header>
 
-      <meta charset="UTF-8" />
-      <meta name="description" content="personal website for ksagar" />
-      <meta
-          name="keywords"
-          content="ksagar, vovw, atharva, k7agar, atharva kshirsagar"
-      />
-      <meta name="author" content="ksagar" />
-
-      <!-- Open Graph / Facebook -->
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://www.ksagar.me/" />
-      <meta property="og:title" content="your friendly neighbourhood engineer" />
-      <meta property="og:description" content="personal website for ksagar" />
-      <meta
-          property="og:image"
-          content=""
-      />
-
-      <!-- Twitter -->
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content="https://www.ksagar.me/" />
-      <meta name="twitter:description" content="personal website for ksagar" />
-
-      <meta name="theme-color" content="#c4c0aa" />
-      <link rel="canonical" href="https://www.ksagar.me/" />
-  </head>
-</head>
-<body>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#overview" id="toc-overview">Overview</a></li>
-<li><a href="#implementation-details"
-id="toc-implementation-details">Implementation Details</a></li>
-<li><a href="#full-code-example" id="toc-full-code-example">Full Code
-Example</a></li>
-<li><a href="#conclusion" id="toc-conclusion">Conclusion</a></li>
-<li><a href="#future-work" id="toc-future-work">Future Work</a></li>
-</ul>
-</nav>
-<h3 id="overview">Overview</h3>
-<ol type="1">
-<li><strong>Character State Definition:</strong> Define the state of the
-character as ([q, , r]), where (q) is the physical pose, () is the
-velocity (or derivative of pose), and (r) is the recurrent memory
-state.</li>
-<li><strong>Neural Network Control Policy:</strong> Introduce a neural
-network control policy (_: s a) that maps a sensory state (s) to an
-action (a).</li>
-<li><strong>Trajectory Rollout with MPPI:</strong> Use MPPI to generate
-trajectories and evaluate cost functions.</li>
-<li><strong>Supervised Learning with MPPI:</strong> Inject noise during
-training, use MPPI to generate trajectories and compute cost terms, and
-train the neural network in a supervised manner to learn from these
-rollouts.</li>
-<li><strong>Real-Time Policy Execution:</strong> Execute the learned
-policy in real-time for interactive control.</li>
-</ol>
-<p>this works for simple systems but for anything complex need to
-minimize KL between the trajectories and the policy</p>
-<h3 id="implementation-details">Implementation Details</h3>
-<h4 id="character-state-definition">1. Character State Definition</h4>
-<p>For simplicity, we’ll consider the state (s) of the character as ([q,
-]), as the recurrent memory (r) is internal to the neural network and
-does not need to be explicitly defined in every rollout.</p>
-<h4 id="neural-network-control-policy">2. Neural Network Control
-Policy</h4>
-<p>We will use a neural network to parameterize the control policy. This
-network will predict the control inputs given the current state.</p>
-<p>For this example, we will use a simple feedforward neural network
-with 3 hidden layers of 250 units each.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode jl"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Flux</span></span>
+            <main>
+                <section class="content">
+                    <h2 class="section-title">Policy learning</h2>
+                                        <p class="post-date">Mar 19,
+2025</p>
+                                                            <nav id="TOC" role="doc-toc">
+                        <ul>
+                        <li><a href="#policy-learning"
+                        id="toc-policy-learning">Policy
+                        learning</a></li>
+                        </ul>
+                    </nav>
+                                        <h1 id="policy-learning">Policy
+                                        learning</h1>
+                                        <p>Descrption: Introduction and
+                                        expirements on policy search</p>
+                                        <h3 id="overview">Overview</h3>
+                                        <ol type="1">
+                                        <li><strong>Character State
+                                        Definition:</strong> Define the
+                                        state of the character as ([q, ,
+                                        r]), where (q) is the physical
+                                        pose, () is the velocity (or
+                                        derivative of pose), and (r) is
+                                        the recurrent memory state.</li>
+                                        <li><strong>Neural Network
+                                        Control Policy:</strong>
+                                        Introduce a neural network
+                                        control policy (_: s a) that
+                                        maps a sensory state (s) to an
+                                        action (a).</li>
+                                        <li><strong>Trajectory Rollout
+                                        with MPPI:</strong> Use MPPI to
+                                        generate trajectories and
+                                        evaluate cost functions.</li>
+                                        <li><strong>Supervised Learning
+                                        with MPPI:</strong> Inject noise
+                                        during training, use MPPI to
+                                        generate trajectories and
+                                        compute cost terms, and train
+                                        the neural network in a
+                                        supervised manner to learn from
+                                        these rollouts.</li>
+                                        <li><strong>Real-Time Policy
+                                        Execution:</strong> Execute the
+                                        learned policy in real-time for
+                                        interactive control.</li>
+                                        </ol>
+                                        <p>this works for simple systems
+                                        but for anything complex need to
+                                        minimize KL between the
+                                        trajectories and the policy</p>
+                                        <h3
+                                        id="implementation-details">Implementation
+                                        Details</h3>
+                                        <h4
+                                        id="character-state-definition">1.
+                                        Character State Definition</h4>
+                                        <p>For simplicity, we’ll
+                                        consider the state (s) of the
+                                        character as ([q, ]), as the
+                                        recurrent memory (r) is internal
+                                        to the neural network and does
+                                        not need to be explicitly
+                                        defined in every rollout.</p>
+                                        <h4
+                                        id="neural-network-control-policy">2.
+                                        Neural Network Control
+                                        Policy</h4>
+                                        <p>We will use a neural network
+                                        to parameterize the control
+                                        policy. This network will
+                                        predict the control inputs given
+                                        the current state.</p>
+                                        <p>For this example, we will use
+                                        a simple feedforward neural
+                                        network with 3 hidden layers of
+                                        250 units each.</p>
+                                        <div class="sourceCode"
+                                        id="cb1"><pre
+                                        class="sourceCode jl"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Flux</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the neural network</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>nx <span class="op">=</span> model.nq <span class="op">+</span> model.nv  <span class="co"># State dimension</span></span>
@@ -170,12 +205,20 @@ with 3 hidden layers of 250 units each.</p>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">Dense</span>(n_hidden, n_hidden, tanh),</span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">Dense</span>(n_hidden, n_hidden, tanh),</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">Dense</span>(n_hidden, nu))          <span class="co"># Output layer for actions (controls)</span></span></code></pre></div>
-<h4 id="trajectory-rollout-with-mppi">3. Trajectory Rollout with
-MPPI</h4>
-<p>MPPI generates samples of trajectories by adding noise to the control
-actions and evaluates the cost for each rollout. Here’s how you can
-integrate MPPI into trajectory generation.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode jl"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">cost</span>(qpos, qvel, ctrl)</span>
+                                        <h4
+                                        id="trajectory-rollout-with-mppi">3.
+                                        Trajectory Rollout with
+                                        MPPI</h4>
+                                        <p>MPPI generates samples of
+                                        trajectories by adding noise to
+                                        the control actions and
+                                        evaluates the cost for each
+                                        rollout. Here’s how you can
+                                        integrate MPPI into trajectory
+                                        generation.</p>
+                                        <div class="sourceCode"
+                                        id="cb2"><pre
+                                        class="sourceCode jl"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">cost</span>(qpos, qvel, ctrl)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Same as before: weights and cost calculation logic</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    w_pos <span class="op">=</span> <span class="fl">1000.0</span>    <span class="co"># Position tracking</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    w_height <span class="op">=</span> <span class="fl">10.0</span>   <span class="co"># Height tracking</span></span>
@@ -241,12 +284,18 @@ integrate MPPI into trajectory generation.</p>
 <span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>    U_global[<span class="op">:</span>, <span class="fl">1</span><span class="op">:</span><span class="kw">end</span><span class="op">-</span><span class="fl">1</span>] <span class="op">.=</span> U_global[<span class="op">:</span>, <span class="fl">2</span><span class="op">:</span><span class="kw">end</span>]</span>
 <span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>    U_global[<span class="op">:</span>, <span class="kw">end</span>] <span class="op">.=</span> <span class="fl">0.0</span></span>
 <span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
-<h4 id="supervised-learning-with-mppi">4. Supervised Learning with
-MPPI</h4>
-<p>Inject noise during training, leveraging MPPI for trajectory
-generation, and using supervised learning to train the neural
-network.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode jl"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Flux.Losses</span>: mse</span>
+                                        <h4
+                                        id="supervised-learning-with-mppi">4.
+                                        Supervised Learning with
+                                        MPPI</h4>
+                                        <p>Inject noise during training,
+                                        leveraging MPPI for trajectory
+                                        generation, and using supervised
+                                        learning to train the neural
+                                        network.</p>
+                                        <div class="sourceCode"
+                                        id="cb3"><pre
+                                        class="sourceCode jl"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Flux.Losses</span>: mse</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Flux.Optimise</span>: Optimiser, ADAM</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Initialize optimizer</span></span>
@@ -290,10 +339,15 @@ network.</p>
 <span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    Flux.<span class="fu">train!</span>(loss, Flux.<span class="fu">params</span>(policy_nn), opt)</span>
 <span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">println</span>(<span class="st">&quot;Epoch </span><span class="sc">$</span>(epoch)<span class="st">, Loss: </span><span class="sc">$</span>(loss)<span class="st">&quot;</span>)</span>
 <span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="cf">end</span></span></code></pre></div>
-<h4 id="real-time-policy-execution">5. Real-Time Policy Execution</h4>
-<p>The trained policy can then be used for real-time interactive
-control.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode jl"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">real_time_controller</span>(m<span class="op">::</span><span class="dt">Model</span>, d<span class="op">::</span><span class="dt">Data</span>)</span>
+                                        <h4
+                                        id="real-time-policy-execution">5.
+                                        Real-Time Policy Execution</h4>
+                                        <p>The trained policy can then
+                                        be used for real-time
+                                        interactive control.</p>
+                                        <div class="sourceCode"
+                                        id="cb4"><pre
+                                        class="sourceCode jl"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">real_time_controller</span>(m<span class="op">::</span><span class="dt">Model</span>, d<span class="op">::</span><span class="dt">Data</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    current_state <span class="op">=</span> [d.qpos; d.qvel]</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    desired_ctrl <span class="op">=</span> <span class="fu">policy_nn</span>(current_state)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fu">clamp</span>.(desired_ctrl, <span class="op">-</span><span class="fl">10.0</span>, <span class="fl">10.0</span>)</span>
@@ -301,10 +355,16 @@ control.</p>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">init_visualiser</span>()</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">visualise!</span>(model, data; controller<span class="op">=</span>real_time_controller)</span></code></pre></div>
-<h3 id="full-code-example">Full Code Example</h3>
-<p>Combining all the components together, here’s the full training and
-execution pipeline using MPPI and a neural network policy.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode jl"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">MuJoCo</span></span>
+                                        <h3 id="full-code-example">Full
+                                        Code Example</h3>
+                                        <p>Combining all the components
+                                        together, here’s the full
+                                        training and execution pipeline
+                                        using MPPI and a neural network
+                                        policy.</p>
+                                        <div class="sourceCode"
+                                        id="cb5"><pre
+                                        class="sourceCode jl"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">MuJoCo</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">LinearAlgebra</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Random</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="im">using</span> <span class="bu">Statistics</span></span>
@@ -458,25 +518,75 @@ execution pipeline using MPPI and a neural network policy.</p>
 <span id="cb5-152"><a href="#cb5-152" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize and evaluate the trained policy</span></span>
 <span id="cb5-153"><a href="#cb5-153" aria-hidden="true" tabindex="-1"></a><span class="fu">init_visualiser</span>()</span>
 <span id="cb5-154"><a href="#cb5-154" aria-hidden="true" tabindex="-1"></a><span class="fu">visualise!</span>(model, data; controller<span class="op">=</span>real_time_controller)</span></code></pre></div>
-<h3 id="conclusion">Conclusion</h3>
-<p>This implementation leverages MPPI for trajectory generation during
-training, allowing the neural network to learn from optimal but noisy
-control inputs. By injecting noise, the method prevents overfitting and
-ensures generalization. The real-time controller uses the learned neural
-network policy to interactively control the character, achieving complex
-and stable behaviors.</p>
-<h3 id="future-work">Future Work</h3>
-<ul>
-<li><strong>Adaptive MPC:</strong> Consider adding adaptive features to
-the MPC to better handle different terrains and perturbations.</li>
-<li><strong>Learning from Perturbations:</strong> Incorporate learning
-from unexpected changes in the task specification and handle
-perturbations due to noise and modeling errors.</li>
-<li><strong>Diverse Characters:</strong> Experiment with different
-character morphologies and extend the method to cover more diverse
-behaviors, such as swimming and flying.</li>
-</ul>
-<p>This hybrid approach of MPPI and neural networks promises robust and
-versatile controllers for interactive character control tasks.</p>
-</body>
+                                        <h3
+                                        id="conclusion">Conclusion</h3>
+                                        <p>This implementation leverages
+                                        MPPI for trajectory generation
+                                        during training, allowing the
+                                        neural network to learn from
+                                        optimal but noisy control
+                                        inputs. By injecting noise, the
+                                        method prevents overfitting and
+                                        ensures generalization. The
+                                        real-time controller uses the
+                                        learned neural network policy to
+                                        interactively control the
+                                        character, achieving complex and
+                                        stable behaviors.</p>
+                                        <h3 id="future-work">Future
+                                        Work</h3>
+                                        <ul>
+                                        <li><strong>Adaptive
+                                        MPC:</strong> Consider adding
+                                        adaptive features to the MPC to
+                                        better handle different terrains
+                                        and perturbations.</li>
+                                        <li><strong>Learning from
+                                        Perturbations:</strong>
+                                        Incorporate learning from
+                                        unexpected changes in the task
+                                        specification and handle
+                                        perturbations due to noise and
+                                        modeling errors.</li>
+                                        <li><strong>Diverse
+                                        Characters:</strong> Experiment
+                                        with different character
+                                        morphologies and extend the
+                                        method to cover more diverse
+                                        behaviors, such as swimming and
+                                        flying.</li>
+                                        </ul>
+                                        <p>This hybrid approach of MPPI
+                                        and neural networks promises
+                                        robust and versatile controllers
+                                        for interactive character
+                                        control tasks.</p>
+
+                    <div class="social-links">
+                        <a href="https://x.com/k7agar" class="social-link">x/k7agar</a>
+                        <a
+                            href="https://github.com/vovw"
+                            target="_blank"
+                            class="social-link"
+                            >git</a
+                        >
+                        <a
+                            href="https://www.youtube.com/@wtfvoidz"
+                            target="_blank"
+                            class="social-link"
+                            >tube</a
+                        >
+                    </div>
+                </section>
+
+                <aside class="sidebar">
+                    <div class="sidebar-content">
+                        <h3 class="sidebar-title">ON THIS PAGE</h3>
+                        <ul class="sidebar-nav">
+                                                    </ul>
+                    </div>
+                </aside>
+            </main>
+        </div>
+    </body>
 </html>

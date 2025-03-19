@@ -1,6 +1,12 @@
 # Vanilla Policy Gradient (VPG) Implementation
 
+
+
+
+
+
 ## TLDR
+> i need to rewrite this again
 A simple PyTorch Reinforcement Learning model where an agent learns to move towards food while avoiding enemies on a 2D grid, based on log-probabilities and policy updates using backpropagation through time.
 
 ## Short Overview of VPG
@@ -244,5 +250,3 @@ By iterating this process over many episodes, the policy gradually improves, lea
 
 following the core principles of the REINFORCE algorithm
 
-
-[home](../index.html)

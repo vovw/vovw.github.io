@@ -1,5 +1,12 @@
 # tech that i often use
 
+Date: Mar 19, 2025
+Description: tech that i often use
+
+
+
+
+
 ## computers
 - macbook pro M3 pro
 macos 15.3 with [loop](https://github.com/MrKai77/Loop) the best window manager for macos
@@ -19,6 +26,3 @@ debian with sway
 
 
 dotfiles here - [vovw/dotfiles](https://github.com/vovw/dotfiles)
-
-
-[home](../index.html)
