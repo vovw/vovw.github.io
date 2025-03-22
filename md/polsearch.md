@@ -1,3 +1,14 @@
+# Policy learning
+
+Description: Policy learning
+
+
+
+
+
+Descrption:  Introduction and expirements on policy search
+
+
 ### Overview
 
 1. **Character State Definition:** Define the state of the character as \([q, \dot{q}, r]\), where \(q\) is the physical pose, \(\dot{q}\) is the velocity (or derivative of pose), and \(r\) is the recurrent memory state.
