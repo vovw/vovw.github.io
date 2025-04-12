@@ -13,33 +13,37 @@
         />
         <link rel="stylesheet" href="style.css" />
         <style>
-            /* Style for the iframe container */
-            .doc-frame {
-                width: 100%;
-                height: calc(
-                    100vh - 100px
-                ); /* Subtract the approximate header height */
-                border: 2px solid var(--text-color);
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                margin: 0;
-                display: block;
-                background-color: white;
-                position: relative;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
+            body {
+                padding: 2rem;
             }
 
-            body {
-                background-image:
-                    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-                    linear-gradient(
-                        90deg,
-                        rgba(0, 0, 0, 0.03) 1px,
-                        transparent 1px
-                    );
-                background-size: 20px 20px;
+            .doc-frame {
+                width: 100%;
+                height: calc(100vh - 220px);
+                border: 2px solid var(--text-color);
+                background-color: white;
+                display: block;
+            }
+
+            @media (max-width: 600px) {
+                body {
+                    padding: 0;
+                    max-width: 100%;
+                }
+
+                header {
+                    padding: 1rem;
+                    margin-bottom: 0;
+                }
+
+                .doc-frame {
+                    height: calc(100vh - 140px);
+                    border: none;
+                }
+
+                main {
+                    padding: 0;
+                }
             }
         </style>
     </head>
@@ -58,7 +62,6 @@
             <nav class="nav-links">
                 <a href="index.html" class="nav-link">ABOUT</a>
                 <a href="craft.html" class="nav-link active">CRAFT</a>
-                <!-- <a href="media.html" class="nav-link">MEDIA</a> -->
             </nav>
         </header>
 
