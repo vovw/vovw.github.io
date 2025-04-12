@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Craft - ksagar</title>
+        <meta name="description" content="Atharva's craft and writings" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            /* Style for the iframe container */
+            .doc-frame {
+                width: 100%;
+                height: calc(
+                    100vh - 100px
+                ); /* Subtract the approximate header height */
+                border: 2px solid var(--text-color);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                margin: 0;
+                display: block;
+                background-color: white;
+                position: relative;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            body {
+                background-image:
+                    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+                    linear-gradient(
+                        90deg,
+                        rgba(0, 0, 0, 0.03) 1px,
+                        transparent 1px
+                    );
+                background-size: 20px 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="profile">
+                <a href="index.html">
+                    <img
+                        src="drift.jpg"
+                        alt="atharva's photo"
+                        class="profile-img"
+                    />
+                    <h1 class="site-title">KSAGAR</h1>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">ABOUT</a>
+                <a href="craft.html" class="nav-link active">CRAFT</a>
+                <!-- <a href="media.html" class="nav-link">MEDIA</a> -->
+            </nav>
+        </header>
+
+        <main>
+            <iframe
+                class="doc-frame"
+                src="https://docs.google.com/document/d/e/2PACX-1vQVDRWUQSxBWOJLnai54IIqBtUhYQYdf6JuM135Y68JIVEXunVxPX4IwIA1LLJXe77E9c_Wy_0_tU-y/pub?embedded=true"
+                title="Google Document"
+            ></iframe>
+        </main>
+    </body>
+</html>

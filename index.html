@@ -5,103 +5,134 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>ksagar</title>
         <meta name="description" content="atharva's personal website" />
-        <meta name="description" content="ksagar's personal website" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="style.css" />
     </head>
+
     <body>
-        <div class="container">
-            <header>
-                <div class="profile">
+        <header>
+            <div class="profile">
+                <a href="index.html">
                     <img
                         src="athu.jpg"
                         alt="atharva's photo"
                         class="profile-img"
                     />
-                    <h1 class="site-title">KSAGAR.SITE</h1>
+                    <h1 class="site-title">KSAGAR</h1>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link active">ABOUT</a>
+                <a href="craft.html" class="nav-link">CRAFT</a>
+                <!-- <a href="media.html" class="nav-link">MEDIA</a> -->
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2 class="section-title">YO</h2>
+                <!-- <p class="text">
+                    i am <strong>atharva</strong>. I love hacking on hardware,
+                    incarnating software, building robots, and generating
+                    shareholder value; and mostly importantly
+                    <b> <i>i enjoy experimenting</i>.</b>
+                </p> -->
+
+                <p class="text">
+                    i am
+                    <span class="hover-container"
+                        ><strong class="hover-trigger">atharva</strong>
+                        <span class="hover-box">
+                            <img
+                                src="drift.jpg"
+                                alt="Atharva drifting"
+                                class="hover-image"
+                            /> </span></span
+                    >. I love hacking on hardware, incarnating software,
+                    building robots, and generating shareholder value; and
+                    mostly importantly
+                    <strong> <i>i enjoy experimenting.</i></strong>
+                </p>
+                <div class="divider"></div>
+
+                <!-- <p class="text">
+                    i'm <strong>19</strong>, currently in university, and living
+                    in <strong>Mumbai</strong>. I am also a professional* cat
+                    photographer. i like pirates and believe that, as humans, it
+                    is our moral duty to reshape the world according to our
+                    preferences, and technology enables this.
+                </p>
+ -->
+                <p class="text">
+                    i'm
+                    <span class="hover-container"
+                        ><strong class="hover-trigger">19</strong>
+                        <span class="hover-box">
+                            <img
+                                src="https://i.pinimg.com/originals/8f/b9/b1/8fb9b12f3026cdaee96a101754b36b2e.jpg"
+                                alt="19"
+                                class="hover-image"
+                            /> </span></span
+                    >, currently in university, and living in
+                    <span class="hover-container"
+                        ><strong class="hover-trigger">Mumbai</strong>
+                        <span class="hover-box">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/F7xZ48abwAAgNst.jpg/600px-F7xZ48abwAAgNst.jpg"
+                                alt="Mumbai"
+                                class="hover-image"
+                            /> </span></span
+                    >. I am also a self proclaimed professional cat photographer. i like
+                    pirates and believe that, as humans; it is our moral duty to
+                    reshape the world according to our preferences, and
+                    technology enables this.
+                </p>
+
+                <div class="japanese-text">
+                    私はあなたに問いかけます。今、何をしていますか？なぜ諦めるのですか？まだ終わっていません！できるはずです！自分を信じてください！あなたの限界はまだ見えていません！今こそ立ち上がる時です！汗をかいて、苦しんで、それでも前に進みましょう！人生は一度きり、今この瞬間が大切なのです！絶対に諦めないでください！あなたならできる！NEVER
+                    GIVE UP!!
                 </div>
-                <nav class="nav-links">
-                    <a href="index.html" class="nav-link active">about</a>
-                    <a href="blog.html" class="nav-link">blog</a>
-                    <a href="uses.html" class="nav-link">uses</a>
-                    <a href="media.html" class="nav-link">media</a>
-                </nav>
-            </header>
 
-            <main>
-                <section class="content">
-                    <h2 class="section-title">yo,</h2>
-                    <p class="text">
-                        i am <strong>atharva</strong>. I love hacking on
-                        hardware, incarnating software, building robots, and
-                        generating shareholder value.
-                        <i>i enjoy expirementing</i>.
-                    </p>
-                    <p class="text">
-                        i'm <strong>19</strong>, currently in university, and
-                        living in <strong>Mumbai</strong>. I am also a
-                        professional* cat photographer. i like pirates and
-                        believe that, as humans, it is our moral duty to reshape
-                        the world according to our preferences, and technology
-                        enables this.
-                    <!-- </p> -->
-                    <!-- <p class="text"> -->
-                    <!--     i love what i do and my work represents me best. check -->
-                    <!--     out <a href="craft.html">craft</a> for my previous side -->
-                    <!--     quests. -->
-                    <!-- </p> -->
-                    <div>
-                        <h3>currently working on</h3>
-                        <ul>
-                            <li>Bio-inspired robots for marine observation</li>
-                            <li>Distributed linear algebra</li>
-                            <li>Mini MoE language models</li>
-                        </ul>
-                    </div>
+                <p class="text"></p>
 
-                    <h2 class="section-title">contact</h2>
-                    <p class="text">
-                        if you want to talk, vibe or build something cool with
-                        me hit me up at
-                        <a href="mailto:k7agar@proton.me" class="inline-link"
-                            >k7agar@proton.me</a
-                        >
-                    </p>
+                <h3 class="section-title">CURRENT QUESTS</h3>
+                <ul class="list">
+                    <li>solving robot learning</li>
+                    <li>distributed linear algebra the right way</li>
+                </ul>
 
-                    <div class="social-links">
-                        <a href="https://x.com/k7agar" class="social-link"
-                            >x/k7agar</a
-                        >
-                        <a
-                            href="https://github.com/vovw"
-                            target="_blank"
-                            class="social-link"
-                            >git</a
-                        >
-                        <a
-                            href="https://www.youtube.com/@wtfvoidz"
-                            target="_blank"
-                            class="social-link"
-                            >tube</a
-                        >
-                    </div>
-                </section>
+                <h2 class="section-title">CONTACT</h2>
+                <p class="text">
+                    if you want to talk, vibe or build something cool with me
+                    hit me up at
+                    <a href="mailto:k7agar@proton.me" class="inline-link"
+                        >k7agar@proton.me</a
+                    >
+                </p>
 
-                <aside class="sidebar">
-                    <div class="sidebar-content">
-                        <h3 class="sidebar-title"></h3>
-                        <ul class="sidebar-nav">
-                            <li>
-                                <a href="#" class="sidebar-link active"
-                                    >about</a
-                                >
-                            </li>
-                            <li>
-                                <a href="#" class="sidebar-link">contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </aside>
-            </main>
-        </div>
+                <div class="social-links">
+                    <a href="https://x.com/k7agar" class="social-link"
+                        >X/K7AGAR</a
+                    >
+                    <a
+                        href="https://github.com/vovw"
+                        target="_blank"
+                        class="social-link"
+                        >GIT</a
+                    >
+                    <a
+                        href="https://www.youtube.com/@wtfvoidz"
+                        target="_blank"
+                        class="social-link"
+                        >TUBE</a
+                    >
+                </div>
+            </section>
+        </main>
     </body>
 </html>
