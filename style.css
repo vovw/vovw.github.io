@@ -199,13 +199,16 @@ strong {
     }
 
     header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
+        justify-content: space-between;
     }
 
     .profile-img {
-        width: 180px;
-        height: 180px;
+        width: 100px;
+        height: 100px;
+        float: none;
+        margin: 0;
     }
 
     .profile a:hover .profile-img {
@@ -220,8 +223,8 @@ strong {
     .nav-links {
         flex-direction: column;
         gap: 0.5rem;
-        width: 100%;
-        margin-top: 1rem;
+        align-items: flex-end;
+        margin-top: 0;
     }
 
     .text {
