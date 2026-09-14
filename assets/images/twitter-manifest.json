@@ -1,0 +1,156 @@
+[
+  {
+    "slug": "workshop-parts",
+    "post_id": "1986837557506941253",
+    "date_ist": "2025-11-07",
+    "source_post": "https://x.com/k7agar/status/1986837557506941253",
+    "source_image": "https://pbs.twimg.com/media/G5KqOalbkAAZT5j?format=jpg&name=large",
+    "credit_note": "Workshop components; SRA team work.",
+    "original_filename": "workshop-parts.jpg",
+    "original_bytes": 564861,
+    "original_sha256": "bfe7f12bda744c1b728eba20bac3ccf2fa0d482098df52bdd9e27ea1f6dca83b",
+    "original_dimensions": [
+      1536,
+      2048
+    ],
+    "image": "assets/images/workshop-parts.webp",
+    "width": 825,
+    "height": 1100,
+    "bytes": 167714,
+    "retrieved": "2026-09-14",
+    "derivation": "Full frame, aspect ratio preserved; resized to at most 1100 px and encoded WebP quality 84; metadata removed.",
+    "source_kind": "Observed X platform rendition, not camera master"
+  },
+  {
+    "slug": "walle-pcb",
+    "post_id": "1987803953158033641",
+    "date_ist": "2025-11-10",
+    "source_post": "https://x.com/k7agar/status/1987803953158033641",
+    "source_image": "https://pbs.twimg.com/media/G5YZJ66bMAAgugR?format=jpg&name=large",
+    "credit_note": "Wall-E v2.7 PCB, SRA-VJTI; reverse silkscreen credits Vishal Mutha and Shaunak Datar.",
+    "original_filename": "walle-pcb.jpg",
+    "original_bytes": 307622,
+    "original_sha256": "d9032e5583341d418775e4e1f450fd35e869cf92cc95c2fb0bc2b189b3f30201",
+    "original_dimensions": [
+      1536,
+      2048
+    ],
+    "image": "assets/images/walle-pcb.webp",
+    "width": 825,
+    "height": 1100,
+    "bytes": 86020,
+    "retrieved": "2026-09-14",
+    "derivation": "Full frame, aspect ratio preserved; resized to at most 1100 px and encoded WebP quality 84; metadata removed.",
+    "source_kind": "Observed X platform rendition, not camera master"
+  },
+  {
+    "slug": "vjepa-saliency",
+    "post_id": "1936104602308690148",
+    "date_ist": "2025-06-20",
+    "source_post": "https://x.com/k7agar/status/1936104602308690148",
+    "source_image": "https://pbs.twimg.com/media/Gt5s0DkbwAEL87F?format=png&name=small",
+    "credit_note": "Atharva visualization of Meta V-JEPA 2 features; similarity-based saliency over human footage, separate from Patch Policy.",
+    "original_filename": "vjepa-saliency.png",
+    "original_bytes": 221886,
+    "original_sha256": "9a26aff0cd23204dd7344ae41ef1d655dd49301926b270665fc1b2e63fecddd8",
+    "original_dimensions": [
+      481,
+      504
+    ],
+    "image": "assets/images/vjepa-saliency.webp",
+    "width": 481,
+    "height": 504,
+    "bytes": 21460,
+    "retrieved": "2026-09-14",
+    "derivation": "Full frame, aspect ratio preserved; resized to at most 1100 px and encoded WebP quality 84; metadata removed.",
+    "source_kind": "Observed X platform rendition, not camera master"
+  },
+  {
+    "slug": "molmoact-setup",
+    "post_id": "2052550568355520542",
+    "date_ist": "2026-05-08",
+    "source_post": "https://x.com/k7agar/status/2052550568355520542",
+    "source_image": "https://pbs.twimg.com/media/HHwf22MaIAAKTEv?format=jpg&name=large",
+    "credit_note": "Atharva camera-mount setup photo for deployment of Ai2 MolmoAct 2.",
+    "original_filename": "molmoact-setup.jpg",
+    "original_bytes": 335232,
+    "original_sha256": "32a34b4d1e1ec4a9573744a69e8a5c8ff209280244a2fef614b016aa02aed1b6",
+    "original_dimensions": [
+      1536,
+      2048
+    ],
+    "image": "assets/images/molmoact-setup.webp",
+    "width": 825,
+    "height": 1100,
+    "bytes": 86560,
+    "retrieved": "2026-09-14",
+    "derivation": "Full frame, aspect ratio preserved; resized to at most 1100 px and encoded WebP quality 84; metadata removed.",
+    "source_kind": "Observed X platform rendition, not camera master"
+  },
+  {
+    "slug": "atari-camera",
+    "post_id": "2085580125148704777",
+    "date_ist": "2026-08-07",
+    "source_post": "https://x.com/k7agar/status/2085580125148704777",
+    "source_image": "https://pbs.twimg.com/media/HPF4ETMaYAAds-j?format=jpg&name=large",
+    "credit_note": "Physical Atari external-camera setup; project with @4rynv, @sahilsapage, @LakshyaLalwani7.",
+    "original_filename": "atari-camera.jpg",
+    "original_bytes": 215464,
+    "original_sha256": "4c9d3fd1fd000a9aa62a65c306ee2f0c3bd4613160cec2ccdedb498f46200e1b",
+    "original_dimensions": [
+      1152,
+      2048
+    ],
+    "image": "assets/images/atari-camera.webp",
+    "width": 619,
+    "height": 1100,
+    "bytes": 57350,
+    "retrieved": "2026-09-14",
+    "derivation": "Full frame, aspect ratio preserved; resized to at most 1100 px and encoded WebP quality 84; metadata removed.",
+    "source_kind": "Observed X platform rendition, not camera master"
+  },
+  {
+    "slug": "umi-cad",
+    "post_id": "2098783385355444667",
+    "date_ist": "2026-09-12",
+    "source_post": "https://x.com/k7agar/status/2098783385355444667",
+    "source_image": "https://pbs.twimg.com/media/HSBgLvhbcAA0zDv?format=png&name=4096x4096",
+    "credit_note": "CAD screenshot, inspired by Yosub Shin yam-umi; author credits Astra assistance. Not a hardware photo or robot rollout.",
+    "original_filename": "umi-cad.png",
+    "original_bytes": 93519,
+    "original_sha256": "7d8ada7a4609b04b7ee3b56d174782311132ba4b1ddfbbc044dd0e04a5e1d369",
+    "original_dimensions": [
+      2600,
+      2400
+    ],
+    "image": "assets/images/umi-cad.webp",
+    "width": 1100,
+    "height": 1015,
+    "bytes": 46012,
+    "retrieved": "2026-09-14",
+    "derivation": "Full frame, aspect ratio preserved; resized to at most 1100 px and encoded WebP quality 84; metadata removed.",
+    "source_kind": "Observed X platform rendition, not camera master"
+  },
+  {
+    "slug": "human-storyboard",
+    "post_id": "2097750512187933138",
+    "date_ist": "2026-09-09",
+    "source_post": "https://x.com/k7agar/status/2097750512187933138",
+    "source_image": "https://pbs.twimg.com/media/HRy06yHb0AAkGJf?format=jpg&name=large",
+    "credit_note": "Source human-video storyboard (confirmed by author reply 2097753371570786427); human hand puts a tool into a case, not robot output.",
+    "original_filename": "human-storyboard.jpg",
+    "original_bytes": 569243,
+    "original_sha256": "437d809cb1acfbca1b956853f7ca0e8b2709a3d4e91f66c3c3b7dda4e104664f",
+    "original_dimensions": [
+      1652,
+      1936
+    ],
+    "image": "assets/images/human-storyboard.webp",
+    "width": 939,
+    "height": 1100,
+    "bytes": 82500,
+    "retrieved": "2026-09-14",
+    "derivation": "Full frame, aspect ratio preserved; resized to at most 1100 px and encoded WebP quality 84; metadata removed.",
+    "source_kind": "Observed X platform rendition, not camera master"
+  }
+]

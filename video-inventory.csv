@@ -1,0 +1,61 @@
+date_utc,source,title,evidence
+2023-08-23T12:40:43+00:00,https://x.com/k7agar/status/1694328815613305250,ISRO launch celebration,"Other; shared event, not own robotics work"
+2023-09-20T11:42:40+00:00,https://x.com/k7agar/status/1704461066464338334,Physics-engine experiment,Craft software
+2024-01-16T17:10:25+00:00,https://x.com/k7agar/status/1747305316570562780,Cursor experiment,Craft software
+2024-02-07T19:10:16+00:00,https://x.com/k7agar/status/1755308009318666399,Early robot trouble,Hardware; controller unverified
+2024-02-08T05:42:25+00:00,https://x.com/k7agar/status/1755467094622396792,Line-following turns,Line following; distinguishes self-balancing difficulty
+2024-02-15T19:02:56+00:00,https://x.com/k7agar/status/1758205267605323988,Short personal clip,Context unverified
+2024-03-26T09:23:56+00:00,https://x.com/k7agar/status/1772555073001853432,Keyboard build,Craft hardware
+2024-06-18T16:32:06+00:00,https://x.com/k7agar/status/1803103406321459379,Collaborative text editor,With Chinmay Kak
+2024-11-03T19:48:12+00:00,https://x.com/k7agar/status/1853162281049501696,Quadruped not walking,Simulation visually verified; method/speed unverified
+2024-11-07T12:40:48+00:00,https://x.com/k7agar/status/1854504273775902852,Trying a two-leg stand,Own recreation attempt; quoted Unitree demo belongs to others
+2024-12-20T14:54:41+00:00,https://x.com/k7agar/status/1870120645402513714,Robot-learning experiment,Quoted research reference; setup unverified
+2024-12-21T13:38:07+00:00,https://x.com/k7agar/status/1870463762534478051,Seeing a robot in real life,"Observation of a robot, not established as own build"
+2025-01-09T21:06:26+00:00,https://x.com/k7agar/status/1877461954068975878,Shaders in Ghostty,Craft software
+2025-01-18T15:20:50+00:00,https://x.com/k7agar/status/1880636472623309130,Kurma dancing,Real hardware; controller/speed unverified for this clip
+2025-01-22T16:46:53+00:00,https://x.com/k7agar/status/1882107678857867660,Reviving an old 3D printer,Craft hardware
+2025-01-31T13:54:56+00:00,https://x.com/k7agar/status/1885325900415459359,CRT console plan,"Planned build, not completed console"
+2025-02-22T15:58:23+00:00,https://x.com/k7agar/status/1893329498948432067,Kurma wireless walking,Explicitly remote controlled; RL planned
+2025-02-24T16:09:03+00:00,https://x.com/k7agar/status/1894056957708738822,3D-printing clip,Craft
+2025-04-11T09:22:48+00:00,https://x.com/k7agar/status/1910624564712812828,GitHub bug recording,Other software
+2025-04-22T15:23:57+00:00,https://x.com/k7agar/status/1914701717087662477,One hour on a 4090,Training experiment; task/setup needs context
+2025-05-30T19:09:01+00:00,https://x.com/k7agar/status/1928529096167870639,Short experiment clip,Context unverified
+2025-06-04T12:06:03+00:00,https://x.com/k7agar/status/1930234594348953721,Go2 keyboard locomotion,Explicit keyboard control; environment unverified
+2025-06-10T12:35:15+00:00,https://x.com/k7agar/status/1932416266331193353,Robot build clip,Controller/environment unverified
+2025-06-11T15:20:18+00:00,https://x.com/k7agar/status/1932820193878946143,Robot sounds,Hardware experiment; controller unverified
+2025-06-11T15:26:53+00:00,https://x.com/k7agar/status/1932821849102283219,Untitled robot clip,Context unverified
+2025-06-12T14:13:11+00:00,https://x.com/k7agar/status/1933165689956900881,Walking progress,Post credits Upsurge Labs; controller unverified
+2025-06-13T09:10:11+00:00,https://x.com/k7agar/status/1933451826273398803,AR demo,Credits @shourshot; do not attribute their work to Atharva
+2025-06-15T03:56:11+00:00,https://x.com/k7agar/status/1934097579035578561,Banana-seeking robot,"AGI caption is a joke, not a result"
+2025-06-15T11:01:19+00:00,https://x.com/k7agar/status/1934204568847655355,LeRobot hackathon,Event at Lossfunk; team context
+2025-06-18T06:48:25+00:00,https://x.com/k7agar/status/1935228087643361573,Bimanipulation demo at hackathon,Shared event demo; individual ownership unverified
+2025-06-18T08:54:42+00:00,https://x.com/k7agar/status/1935259865716588740,Monitoring the situation,Robot clip; context unverified
+2025-06-21T10:12:28+00:00,https://x.com/k7agar/status/1936366600288166050,ViT/PCA token visualization,Representation visualization; suggested by @rami_mmo
+2025-07-31T05:18:36+00:00,https://x.com/k7agar/status/1950788162814664765,Early sim-to-real deployment,"Real hardware; vision; PPO, FPO in progress; speed unspecified"
+2025-08-06T14:41:35+00:00,https://x.com/k7agar/status/1953104167482085578,Sim-to-real failed attempt,Real hardware; explicitly pure sim-to-real RL; speed unspecified
+2025-08-06T15:49:15+00:00,https://x.com/k7agar/status/1953121197300044173,Sim-to-real progress,Real hardware; same-day follow-up; speed unspecified
+2025-08-07T14:59:13+00:00,https://x.com/k7agar/status/1953470993558900803,RL cube pickup,Real hardware; author confirms reinforcement learning; speed unspecified
+2025-09-12T16:20:52+00:00,https://x.com/k7agar/status/1966537506393903454,Cats and 3D printing,Craft / personal
+2025-09-18T18:03:14+00:00,https://x.com/k7agar/status/1968737592662249956,LeRobot experiment,Credits LeRobot team; controller needs verification
+2025-10-05T16:21:07+00:00,https://x.com/k7agar/status/1974872488170438890,Hard rock robotics,Hardware/music experiment; controller unverified
+2025-11-03T14:06:27+00:00,https://x.com/k7agar/status/1985347847815065911,Robots,Hardware clip; method unverified
+2025-11-08T18:22:30+00:00,https://x.com/k7agar/status/1987224223392411954,Behavioral cloning,Real hardware policy rollout; Prime Intellect compute credit
+2025-11-15T16:23:52+00:00,https://x.com/k7agar/status/1989731085501304998,Egocentric-10K hand reconstruction,HaMeR visualization on Build AI data; no robot rollout
+2025-11-20T20:11:08+00:00,https://x.com/k7agar/status/1991600216341115367,ESP32 kits,Craft hardware / teaching
+2025-12-05T15:59:09+00:00,https://x.com/k7agar/status/1996972620504313906,Listening to music,Experiment; context unverified
+2026-03-29T12:22:46+00:00,https://x.com/k7agar/status/2038230382886494550,MacBook harmonium,Credits @spr4bhu; Craft
+2026-04-12T12:56:48+00:00,https://x.com/k7agar/status/2043312379258446131,robodal policy-serving benchmark,π0 on Modal; ALOHA simulation; code linked; hardware future work
+2026-05-08T00:29:36+00:00,https://x.com/k7agar/status/2052546425620406743,MolmoAct 2 deployment,Ai2 model on own hardware; 2×; limited out-of-box capability
+2026-07-24T07:11:41+00:00,https://x.com/k7agar/status/2080551476041228335,Patch Policy reproduction,"Push-T simulation; own reproduction, external original paper"
+2026-07-26T09:39:41+00:00,https://x.com/k7agar/status/2081313497741447559,Patch Policy hardware rollout,M3 Pro inference; X speed unspecified; repo GIF separately 2×
+2026-08-06T17:26:19+00:00,https://x.com/k7agar/status/2085417196839452778,Physical Atari RL,External camera / physical actuation; collaboration
+2026-08-07T03:57:54+00:00,https://x.com/k7agar/status/2085576138961907900,Physical Atari follow-up,Credits @4rynv @sahilsapage @LakshyaLalwani7; external camera verified
+2026-08-27T12:55:12+00:00,https://x.com/k7agar/status/2092959111843578262,Zero-shot towel-folding attempt,RL next is a plan; exact model/speed unverified
+2026-09-01T16:04:36+00:00,https://x.com/k7agar/status/2094818716433465631,π0.5 T-shirt folding,Real hardware; unseen environment; 4× in author reply
+2026-09-06T13:24:52+00:00,https://x.com/k7agar/status/2096590458369810679,Astra stands a block upright,With Sujal; camera/joint-angle interface; repeatability described as mixed
+2026-09-06T13:37:34+00:00,https://x.com/k7agar/status/2096593654320341027,Astra table wiping,Sustained task experiment; AGI speculation is not an achieved result
+2026-09-06T14:07:37+00:00,https://x.com/k7agar/status/2096601215652249753,Folding then undoing progress,Real hardware; head + wrist views; speed unanswered
+2026-09-07T17:29:36+00:00,https://x.com/k7agar/status/2097014434745201002,Cloth folding,With Tirth Gada; exact setup/speed unverified
+2026-09-09T18:14:04+00:00,https://x.com/k7agar/status/2097750401789685824,Human video → storyboard → robot action,Experimental pipeline; method/speed needs fuller documentation
+2026-09-12T14:35:33+00:00,https://x.com/k7agar/status/2098782572247703814,UMI-style gripper test,Human-operated hardware interface; inspiration YosubShin/yam-umi
+2026-09-13T10:18:47+00:00,https://x.com/k7agar/status/2099080341210452400,UMI build timelapse,Explicit timelapse; speed factor unspecified
