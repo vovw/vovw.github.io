@@ -11,7 +11,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 ARCHIVE = Path(sys.argv[1]).resolve()
-MANIFEST = ROOT / 'assets/media/manifest.json'
+MANIFEST = ROOT / 'robotics/media/manifest.json'
 
 def probe(path):
     return json.loads(subprocess.check_output([

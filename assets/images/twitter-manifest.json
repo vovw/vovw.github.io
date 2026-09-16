@@ -13,7 +13,7 @@
       1536,
       2048
     ],
-    "image": "assets/images/workshop-parts.webp",
+    "image": "robotics/media/workshop-parts.webp",
     "width": 825,
     "height": 1100,
     "bytes": 167714,
@@ -35,7 +35,7 @@
       1536,
       2048
     ],
-    "image": "assets/images/walle-pcb.webp",
+    "image": "robotics/media/walle-pcb.webp",
     "width": 825,
     "height": 1100,
     "bytes": 86020,
@@ -79,7 +79,7 @@
       1536,
       2048
     ],
-    "image": "assets/images/molmoact-setup.webp",
+    "image": "robotics/media/molmoact-setup.webp",
     "width": 825,
     "height": 1100,
     "bytes": 86560,
@@ -101,7 +101,7 @@
       1152,
       2048
     ],
-    "image": "assets/images/atari-camera.webp",
+    "image": "robotics/media/atari-camera.webp",
     "width": 619,
     "height": 1100,
     "bytes": 57350,
@@ -123,7 +123,7 @@
       2600,
       2400
     ],
-    "image": "assets/images/umi-cad.webp",
+    "image": "robotics/media/umi-cad.webp",
     "width": 1100,
     "height": 1015,
     "bytes": 46012,
@@ -145,7 +145,7 @@
       1652,
       1936
     ],
-    "image": "assets/images/human-storyboard.webp",
+    "image": "robotics/media/human-storyboard.webp",
     "width": 939,
     "height": 1100,
     "bytes": 82500,

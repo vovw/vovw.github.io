@@ -36,7 +36,7 @@ The questions and transitions are draft editorial synthesis from the experiments
 
 ## Featured clip evidence
 
-See `assets/media/manifest.json` for source IDs, original filenames, captions, dimensions, durations, bytes and hashes. All 13 clips are local compressed MP4 derivatives with WebP posters. Selected originals are **X's downloadable renditions, not camera masters**.
+See `robotics/media/manifest.json` for source IDs, original filenames, captions, dimensions, durations, bytes and hashes. All 13 clips are local compressed MP4 derivatives with WebP posters. Selected originals are **X's downloadable renditions, not camera masters**.
 
 | Date | Demo / source | Verified interpretation and limits |
 | --- | --- | --- |
