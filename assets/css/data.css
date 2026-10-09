@@ -1,0 +1,8 @@
+.data-head { margin-bottom:32px; }
+.data-head h1 { font-size:clamp(32px,5vw,54px); line-height:1.12; letter-spacing:-1px; margin:0 0 12px; padding:0; }
+.data-head p { color:var(--muted); font-size:17px; line-height:1.5; margin:0; padding:0; text-align:left; }
+.data-page .card--wide video { height:auto; }
+.data-page .card:not(.card--wide) video { height:420px; }
+@media (max-width:540px) {
+    .data-page .card:not(.card--wide) video { height:auto; max-height:440px; }
+}

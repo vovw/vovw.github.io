@@ -1,0 +1,25 @@
+{
+  "path_base": "repository root",
+  "items": [
+    {
+      "source_file": "05 YAM teleoperation - leader arms - vruga.mp4",
+      "source_sha256": "e5fc4d4b5a99a87903b8102706e3e4347857a41a96a3b1996f253bfe19fc04c9",
+      "source_url": "https://x.com/vruga_/status/2049129307222786309",
+      "video": "assets/media/data/yam-teleoperation.mp4",
+      "poster": "assets/media/data/yam-teleoperation.webp"
+    },
+    {
+      "source_file": "02 Magnetic encoder leader arm.mp4",
+      "source_sha256": "8278dddea9248a2ab5b6ba6e8fc0fcbd639acd0e9e7918e5475508c8179ce4d6",
+      "source_url": "https://x.com/k7agar/status/2105041329604698464",
+      "video": "assets/media/data/leader-arm.mp4",
+      "poster": "assets/media/data/leader-arm.webp"
+    },
+    {
+      "source_url": "https://github.com/SRA-VJTI/karma/blob/b4f06f6d645755e605b6c0aec7c10af3d2c911d6/docs/media/yam-human-in-the-loop.mp4",
+      "source_sha256": "0c7e10b9ceea4d269effeaf85c2f7ed8a494f05cb37c67c3845d07a9514a1228",
+      "video": "assets/media/data/yam-vr-hitl.mp4",
+      "poster": "assets/media/data/yam-vr-hitl.jpg"
+    }
+  ]
+}
