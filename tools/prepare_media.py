@@ -11,7 +11,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 ARCHIVE = Path(sys.argv[1]).resolve()
-MANIFEST = ROOT / 'robotics/media/manifest.json'
+MANIFEST = ROOT / 'data/media/robotics.json'
 
 def probe(path):
     return json.loads(subprocess.check_output([
@@ -26,6 +26,8 @@ for item in entries:
         continue
     destination = ROOT / item['video']
     poster = ROOT / item['poster']
+    destination.parent.mkdir(parents=True, exist_ok=True)
+    poster.parent.mkdir(parents=True, exist_ok=True)
     if not destination.exists():
         subprocess.run([
             'ffmpeg', '-hide_banner', '-loglevel', 'error', '-i', str(original),

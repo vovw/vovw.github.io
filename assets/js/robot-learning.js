@@ -26,7 +26,32 @@ if ('IntersectionObserver' in window) {
 videos.forEach((video) => {
     video.addEventListener('play', () => {
         videos.forEach((other) => {
-            if (other !== video) other.pause();
+            if (video.hasAttribute('data-gallery-loop')) return;
+            if (other !== video && !other.hasAttribute('data-gallery-loop')) other.pause();
         });
     });
 });
+
+// GIF-like gallery loops use small MP4s and run only while visible.
+const galleryLoops = document.querySelectorAll('video[data-gallery-loop]');
+const allowGalleryMotion = !window.matchMedia('(prefers-reduced-motion: reduce)').matches && !navigator.connection?.saveData;
+if (allowGalleryMotion && 'IntersectionObserver' in window) {
+    const loopObserver = new IntersectionObserver((entries) => {
+        entries.forEach(({ target, isIntersecting }) => {
+            target.dataset.inView = String(isIntersecting);
+            if (isIntersecting && !document.hidden) {
+                loadPoster(target);
+                target.play().catch(() => {});
+            } else {
+                target.pause();
+            }
+        });
+    }, { threshold: 0.5 });
+    galleryLoops.forEach((video) => loopObserver.observe(video));
+    document.addEventListener('visibilitychange', () => {
+        galleryLoops.forEach((video) => {
+            if (document.hidden) video.pause();
+            else if (video.dataset.inView === 'true') video.play().catch(() => {});
+        });
+    });
+}

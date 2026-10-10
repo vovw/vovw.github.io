@@ -1,3 +1,29 @@
-weebsite
+ksagar.site — personal website
 
-url - ksagar.site
+Static HTML/CSS. No install or build step.
+Page routes, layouts, styles, and content are preserved.
+
+Repository layout
+  index.html, craft.html, projects.html, research.html — existing pages
+  work/index.html              — work page
+  data/index.html              — teleoperation and data collection videos
+  robotics/index.html          — robotics worklog
+  robot-learning.html          — existing compatibility redirect
+  assets/css/                  — unchanged stylesheets
+  assets/js/                   — video playback helper
+  assets/media/                — media grouped by project
+    emg/, walle/, mario/        — hardware and workshop media
+    robotics/, lab/, research/  — experiments and supporting images
+    profile/                   — portraits; original JPGs in originals/
+  data/media/                  — provenance manifests (repository-relative paths)
+  data/inventories/            — source inventory CSVs
+  docs/UPDATING.md             — editing and media preparation guide
+  docs/audits/                 — source reviews and historical audit notes
+  tools/                      — media preparation and local link validation
+
+Run from the repository root:
+  python3 -m http.server 8000 --bind 127.0.0.1
+  python3 tools/check_site.py
+
+Preview: http://127.0.0.1:8000/
+Website: https://ksagar.site

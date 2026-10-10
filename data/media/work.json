@@ -1,0 +1,79 @@
+{
+  "added": "2026-09-24",
+  "note": "Local Downloads supplied the source files. Descriptive captions identify only visible content; project and performance details were not inferred from filenames.",
+  "items": [
+    {
+      "source_file": "AA7879A7-653B-4708-BFFA-8527C2DDF84E.jpg",
+      "source_sha256": "6acb4b7a2dce19d3235eec51270efa617c6ac95e78700310120625aeb2fefaeb",
+      "derived": "assets/media/lab/recent-workbench.webp"
+    },
+    {
+      "source_file": "40B19C22-9000-49FB-9C82-B97D2A15D121.mp4",
+      "source_sha256": "d8604083d21aaef31d26b76be9e3f92936ee5f58bfaf12181fb53b5f3881f6ac",
+      "derived": [
+        "assets/media/lab/recent-robot-arms.mp4",
+        "assets/media/lab/recent-robot-arms.webp"
+      ],
+      "note": "The file with (1) in its name is an identical duplicate and was skipped."
+    },
+    {
+      "source_file": "237CAA1F-91C9-47B6-92A9-6266245E6A73.mp4",
+      "source_sha256": "dc4a2d1981813e0f48e7fb7328ec1d7d6b583e1b4fc27aa7a7b822462b77c65d",
+      "derived": [
+        "assets/media/walle/walle-controller.mp4",
+        "assets/media/walle/walle-controller.webp"
+      ],
+      "project": "Wall-E"
+    },
+    {
+      "source_file": "F4AB149B-9D0C-4010-B88B-7C2375622019.gif",
+      "source_sha256": "15c7098a860ff34acad669258f70a3b0fd63bef4defa8096a6e860b79866295e",
+      "derived": [
+        "assets/media/lab/recent-simulation.mp4",
+        "assets/media/lab/recent-simulation.webp"
+      ]
+    },
+    {
+      "source_file": "8B034EA7-0DB8-4509-A604-0923509E39C7.jpg",
+      "source_sha256": "484d6782f6f8712e59208ada4ef02096c51de2dd010c017ad019a61df8c2d4f2",
+      "derived": "assets/media/walle/new-walle-kits.webp"
+    },
+    {
+      "source_file": "DEB32B1B-5164-4474-A0E6-60E65C42AD4C.jpg",
+      "source_sha256": "09113301abd53668de06833e8ab7e4d67e881e42fc25b5038237fd5b0c6eddc3",
+      "derived": "assets/media/lab/new-robot-arm.webp"
+    },
+    {
+      "source_file": "135A83BB-9C43-48CD-8EC3-6671C1958F91.mp4",
+      "source_sha256": "007406ea00618792697f4c889ec4425f71e0c9db245411ad432a14f2f0ccf69d",
+      "derived": [
+        "assets/media/lab/new-legged-robot.mp4",
+        "assets/media/lab/new-legged-robot.webp"
+      ]
+    },
+    {
+      "source_file": "IMG_0380.mov",
+      "source_sha256": "6ffe32f0a806b5d759cb591e653839e759b813fc8dbfec7b484505c14e544976",
+      "derived": [
+        "assets/media/emg/emg-armband-test.mp4",
+        "assets/media/emg/emg-armband-test.webp"
+      ]
+    },
+    {
+      "source_file": "dashboard_emg.png",
+      "source_sha256": "d15d124e1585f94cedec318f86bfbc958a155f49890d055b3332f1f82bbb8c4b",
+      "derived": "assets/media/emg/emg-dashboard.webp"
+    },
+    {
+      "source_file": "emg_plot.png",
+      "source_sha256": "2f455b74d39b3fc76a38ade48c6e92c3c96d5693cf33592c00e289cd2ebfaaae",
+      "derived": "assets/media/emg/emg-windows.webp"
+    },
+    {
+      "source_file": "Screenshot_2024-08-10_at_1.26.15_AM.png",
+      "source_sha256": "ffd29a5cbc1571362c916a6e7e5e700e2043c20d3b76712c91f2044440925dca",
+      "derived": "assets/media/emg/emg-readings.webp"
+    }
+  ],
+  "path_base": "repository root"
+}

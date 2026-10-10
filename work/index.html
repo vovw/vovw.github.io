@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work — Atharva Kshirsagar</title>
+    <meta name="description" content="Selected work by Atharva Kshirsagar: EMG armband, Wall-E, and robot learning." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Work — Atharva Kshirsagar" />
+    <meta property="og:description" content="EMG armband, Wall-E, and robot learning." />
+    <meta property="og:url" content="https://ksagar.site/work/" />
+    <meta property="og:image" content="https://ksagar.site/assets/media/robotics/social-preview-photo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://ksagar.site/work/" />
+    <link rel="icon" href="../favicon.svg" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/work.css" />
+    <script src="../assets/js/robot-learning.js" defer></script>
+    <script src="../assets/js/profile-photo.js" defer></script>
+</head>
+<body class="work-page">
+    <main id="main">
+        <h1 class="sr-only">Work</h1>
+        <section class="project" id="emg" aria-labelledby="emg-title">
+            <div class="project-head"><span class="number">01 / 03</span><div><h2 id="emg-title">EMG armband</h2><p>Muscle signals → hand gestures</p></div><a class="project-link" href="https://github.com/vovw/emgband">code ↗</a></div>
+            <figure class="feature video-feature">
+                <video controls muted playsinline preload="none" poster="../assets/media/emg/emg-armband-test.webp" width="480" height="640" aria-label="EMG electrodes and acquisition hardware on a forearm"><source src="../assets/media/emg/emg-armband-test.mp4" type="video/mp4" /></video>
+                <figcaption>Electrodes and acquisition hardware. Built with Shaunak Datar and Piyush Patle at SRA-VJTI. <a href="https://blog.sravjti.in/2024/07/26/how-does-emg-armband-work.html">Project notes ↗</a></figcaption>
+            </figure>
+            <div class="gallery gallery--two emg-gallery">
+                <figure class="card"><a href="../assets/media/emg/emg-dashboard.webp"><img src="../assets/media/emg/emg-dashboard.webp" width="1800" height="1463" loading="lazy" decoding="async" alt="Four-channel EMG data collection dashboard" /></a><figcaption>Data collection dashboard.</figcaption></figure>
+                <figure class="card"><a href="../assets/media/emg/emg-readings.webp"><img src="../assets/media/emg/emg-readings.webp" width="1800" height="1256" loading="lazy" decoding="async" alt="Plot of sensor readings with one large burst near the middle" /></a><figcaption>Sensor readings.</figcaption></figure>
+                <figure class="card card--wide"><a href="../assets/media/emg/emg-windows.webp"><img src="../assets/media/emg/emg-windows.webp" width="2000" height="1294" loading="lazy" decoding="async" alt="Grid of recorded EMG signal windows across four channels" /></a><figcaption>Recorded signal windows.</figcaption></figure>
+            </div>
+        </section>
+
+        <section class="project" id="walle" aria-labelledby="walle-title">
+            <div class="project-head"><span class="number">02 / 03</span><div><h2 id="walle-title">Wall-E</h2><p>Robot kits, control, and workshops</p></div><a class="project-link" href="https://github.com/sra-vjti/wall-e">code ↗</a></div>
+            <div class="gallery gallery--two">
+                <figure class="card card--large"><img src="../assets/media/walle/walle-kits.webp" width="1000" height="750" loading="lazy" decoding="async" alt="Atharva among stacks of Wall-E robot kits" /><figcaption>Building and testing kits for 300+ students with SRA-VJTI.</figcaption></figure>
+                <figure class="card"><img src="../assets/media/walle/new-walle-kits.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="A row of Wall-E robot kits with visible circuit boards and yellow wheels" /><figcaption>Wall-E kits on the workbench. <a href="https://www.youtube.com/watch?v=AkP-XUwkO90">Watch the demo ↗</a></figcaption></figure>
+                <figure class="card"><img src="../assets/media/walle/walle-pcb.webp" width="825" height="1100" loading="lazy" decoding="async" alt="Wall-E v2.7 circuit board" /><figcaption>Wall-E v2.7 PCB.</figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/walle/walle-controller.webp" width="480" height="844" aria-label="Wall-E controller board with illuminated blue LEDs"><source src="../assets/media/walle/walle-controller.mp4" type="video/mp4" /></video><figcaption>Wall-E controller board test.</figcaption></figure>
+                <figure class="card"><img src="../assets/media/walle/sra-team.webp" width="1000" height="750" loading="lazy" decoding="async" alt="SRA teammates in matching shirts" /><figcaption>The SRA team.</figcaption></figure>
+            </div>
+        </section>
+
+        <section class="project" id="robot-learning" aria-labelledby="robot-title">
+            <div class="project-head"><span class="number">03 / 03</span><div><h2 id="robot-title">Robot learning</h2><p>From simulation to physical action</p></div><a class="project-link" href="../robotics/">worklog ↗</a></div>
+            <figure class="feature video-feature">
+                <video controls muted playsinline preload="none" poster="../assets/media/robotics/sim2real-pickup.webp" width="540" height="720" aria-label="Simulation-trained policy picking up a cube with a real robot arm"><source src="../assets/media/robotics/sim2real-pickup.mp4" type="video/mp4" /></video>
+                <figcaption>Sim-to-real cube pickup · autonomous policy on hardware. <a href="https://x.com/k7agar/status/1953470993558900803">7 Aug 2025 ↗</a></figcaption>
+            </figure>
+            <div class="gallery gallery--two robot-gallery">
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/sim2real-july.webp" width="540" height="720" aria-label="Early sim-to-real deployment on a physical robot arm"><source src="../assets/media/robotics/sim2real-july.mp4" type="video/mp4" /></video><figcaption>Early sim-to-real deployment · hardware. <a href="https://x.com/k7agar/status/1950788162814664765">31 Jul 2025 ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/sim2real-attempt.webp" width="540" height="720" aria-label="Unsuccessful cube pickup attempt by a real robot arm"><source src="../assets/media/robotics/sim2real-attempt.mp4" type="video/mp4" /></video><figcaption>Cube pickup attempt · hardware. <a href="https://x.com/k7agar/status/1953104167482085578">6 Aug 2025 ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/sim2real-progress.webp" width="528" height="720" aria-label="Progress on cube pickup with a real robot arm"><source src="../assets/media/robotics/sim2real-progress.mp4" type="video/mp4" /></video><figcaption>Pickup progress · hardware. <a href="https://x.com/k7agar/status/1953121197300044173">6 Aug 2025 ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/behavioral-cloning.webp" width="404" height="720" aria-label="Behavioral cloning policy moving a wheel on a real robot"><source src="../assets/media/robotics/behavioral-cloning.mp4" type="video/mp4" /></video><figcaption>Behavioral cloning · hardware. <a href="https://x.com/k7agar/status/1987224223392411954">8 Nov 2025 ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/hand-reconstruction.webp" width="960" height="540" aria-label="Hand mesh reconstruction on human demonstration video"><source src="../assets/media/robotics/hand-reconstruction.mp4" type="video/mp4" /></video><figcaption>Hand reconstruction from human video. <a href="https://x.com/k7agar/status/1989731085501304998">15 Nov 2025 ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/robodal.webp" width="640" height="480" aria-label="Remote policy inference controlling an ALOHA simulator"><source src="../assets/media/robotics/robodal.mp4" type="video/mp4" /></video><figcaption>Remote inference · simulation. <a href="https://github.com/vovw/robodal">Robodal ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/molmoact2.webp" width="960" height="540" aria-label="MolmoAct 2 pretrained policy on a real robot"><source src="../assets/media/robotics/molmoact2.mp4" type="video/mp4" /></video><figcaption>MolmoAct 2 · pretrained policy on hardware. <a href="https://x.com/k7agar/status/2052546425620406743">Demo ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/patch-pusht.webp" width="224" height="224" aria-label="Patch Policy reproduction in Push-T simulation"><source src="../assets/media/robotics/patch-pusht.mp4" type="video/mp4" /></video><figcaption>Patch Policy reproduction · simulation. <a href="https://github.com/vovw/patchpol">Code ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/patch-hardware.webp" width="404" height="720" aria-label="Patch Policy reproduction tested on real robot hardware"><source src="../assets/media/robotics/patch-hardware.mp4" type="video/mp4" /></video><figcaption>Patch Policy trial · hardware. <a href="https://x.com/k7agar/status/2081313497741447559">26 Jul 2026 ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/physical-atari.webp" width="404" height="720" aria-label="Camera and robot joystick playing Atari"><source src="../assets/media/robotics/physical-atari.mp4" type="video/mp4" /></video><figcaption>Atari through a camera and physical joystick. <a href="https://x.com/k7agar/status/2085580125148704777">Setup ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/pi05-folding.webp" width="960" height="540" aria-label="Pi zero point five policy folding a T-shirt on a real robot"><source src="../assets/media/robotics/pi05-folding.mp4" type="video/mp4" /></video><figcaption>π0.5 T-shirt folding · hardware · 4× speed. <a href="https://x.com/k7agar/status/2094818716433465631">Demo ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/folding-failure.webp" width="640" height="480" aria-label="Real robot disrupts an initial fold with later actions"><source src="../assets/media/robotics/folding-failure.mp4" type="video/mp4" /></video><figcaption>Folding trial · initial fold undone. <a href="https://x.com/k7agar/status/2096601215652249753">6 Sep 2026 ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/umi.webp" width="576" height="720" aria-label="Manual test of a handheld UMI-style gripper"><source src="../assets/media/robotics/umi.mp4" type="video/mp4" /></video><figcaption>Handheld UMI-style gripper · manual test. <a href="https://x.com/k7agar/status/2098782572247703814">Demo ↗</a></figcaption></figure>
+                <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/robotics/full-stack-folding.webp" width="848" height="478" aria-label="Cloth folding with model training and inference on the team's infrastructure"><source src="../assets/media/robotics/full-stack-folding.mp4" type="video/mp4" /></video><figcaption>Cloth folding · Karma · hardware · 1.5× speed. <a href="https://github.com/sra-vjti/karma">Code ↗</a></figcaption></figure>
+            </div>
+            <div class="recent">
+                <div class="recent-head"><h3>Recent lab media</h3><span>September 2026</span></div>
+                <div class="gallery gallery--two">
+                    <figure class="card"><img src="../assets/media/lab/new-robot-arm.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Red and white robot arm at a lab bench" /><figcaption>Robot arm at the lab bench.</figcaption></figure>
+                    <figure class="card"><img src="../assets/media/lab/recent-workbench.webp" width="1200" height="1600" loading="lazy" decoding="async" alt="Two robot arms and electronics on a workbench" /><figcaption>Robot arms on the workbench.</figcaption></figure>
+                    <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/lab/new-legged-robot.webp" width="960" height="720" aria-label="Legged robot hardware during a lab test"><source src="../assets/media/lab/new-legged-robot.mp4" type="video/mp4" /></video><figcaption>Legged robot lab test.</figcaption></figure>
+                    <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/lab/recent-robot-arms.webp" width="960" height="720" aria-label="Short lab clip of robot hardware"><source src="../assets/media/lab/recent-robot-arms.mp4" type="video/mp4" /></video><figcaption>Robot hardware test.</figcaption></figure>
+                    <figure class="card"><video controls muted playsinline preload="none" data-poster="../assets/media/lab/recent-simulation.webp" width="986" height="578" aria-label="Humanoid movement shown in a robotics simulator"><source src="../assets/media/lab/recent-simulation.mp4" type="video/mp4" /></video><figcaption>Humanoid simulation clip.</figcaption></figure>
+                </div>
+            </div>
+            <a class="more-link" href="../robotics/">Full robot learning worklog ↗</a>
+        </section>
+        <footer><a href="mailto:k7agar@gmail.com">Get in touch ↗</a><span><a href="https://github.com/vovw">GitHub</a> · <a href="https://x.com/k7agar">X</a></span></footer>
+    </main>
+</body>
+</html>

@@ -4,326 +4,160 @@
     <meta charset="UTF-8" />
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Robot learning — atharva / ksagar</title>
-    <meta name="description" content="Atharva's robotics projects, 2025–2026: hardware workshops, sim-to-real reinforcement learning, imitation learning, and pretrained policy deployment." />
+    <title>two years of robotics, one year of intelligent robots — atharva / ksagar</title>
+    <meta name="description" content="Two years of robotics and one year of intelligent robots: sim-to-real RL, human demonstrations, generalist policies, recovery, and tinyUMI." />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="atharva / ksagar" />
     <meta property="og:url" content="https://ksagar.site/robotics/" />
-    <meta property="og:title" content="Robot learning — Atharva’s worklog" />
-    <meta property="og:description" content="Robotics projects, experiments, and demos by Atharva." />
-    <meta property="og:image" content="https://ksagar.site/robotics/media/social-preview-photo.jpg" />
-    <meta property="og:image:secure_url" content="https://ksagar.site/robotics/media/social-preview-photo.jpg" />
+    <meta property="og:title" content="two years of robotics, one year of intelligent robots — Atharva" />
+    <meta property="og:description" content="Two years of robotics, one year of intelligent robots: experiments, failures, and breakthroughs by Atharva." />
+    <meta property="og:image" content="https://ksagar.site/assets/media/robotics/social-preview-photo.jpg" />
+    <meta property="og:image:secure_url" content="https://ksagar.site/assets/media/robotics/social-preview-photo.jpg" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="900" />
     <meta property="og:image:height" content="1200" />
     <meta property="og:image:alt" content="Atharva working beside a robot arm in the lab." />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:creator" content="@k7agar" />
-    <meta name="twitter:title" content="Robot learning — Atharva’s worklog" />
-    <meta name="twitter:description" content="Robotics projects, experiments, and demos by Atharva." />
-    <meta name="twitter:image" content="https://ksagar.site/robotics/media/social-preview-photo.jpg" />
+    <meta name="twitter:title" content="two years of robotics, one year of intelligent robots — Atharva" />
+    <meta name="twitter:description" content="Two years of robotics, one year of intelligent robots: experiments, failures, and breakthroughs by Atharva." />
+    <meta name="twitter:image" content="https://ksagar.site/assets/media/robotics/social-preview-photo.jpg" />
     <meta name="twitter:image:alt" content="Atharva working beside a robot arm in the lab." />
-    <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../robot-learning.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/robot-learning.css" />
     <link rel="icon" href="../favicon.svg" />
     <link rel="canonical" href="https://ksagar.site/robotics/" />
-    <script src="../robot-learning.js" defer></script>
+    <script src="../assets/js/robot-learning.js" defer></script>
+    <script src="../assets/js/profile-photo.js" defer></script>
 </head>
 <body class="robot-page">
-    <a class="skip-link" href="#main">Skip to the experiments</a>
+    <a class="skip-link" href="#main">Skip to the story</a>
     <header>
         <div class="profile">
-            <a href="../index.html"><img class="profile-img" src="../assets/images/main.webp" width="164" height="219" alt="atharva" /></a>
+            <a href="../index.html"><img class="profile-img" src="../assets/media/profile/main.webp" width="164" height="219" alt="atharva" /></a>
             <a class="site-name" href="../index.html">atharva ☆</a>
         </div>
         <nav class="nav-links" aria-label="Main navigation">
-            <a class="nav-link" href="../index.html">ABOUT</a>
-            <a class="nav-link active" href="./" aria-current="page">ROBOT LEARNING</a>
-            <a class="nav-link" href="../craft.html">CRAFT</a>
-        </nav>
+                <a href="../index.html" class="nav-link">ABOUT</a>
+                <a href="../craft.html" class="nav-link">CRAFT</a>
+                <a href="/robotics/" class="nav-link active" aria-current="page">ROBOTICS</a>
+            </nav>
+
     </header>
     <main id="main">
-        <div class="opening">
-            <div>
-                <p class="eyebrow">projects · 2025–2026</p>
-                <h1>robot learning</h1>
-                <p class="intro">From building robot kits and teaching manipulation to training and deploying learned policies.</p>
-                <p>This record follows my work through sim-to-real reinforcement learning, behavioral cloning, pretrained models, and longer manipulation tasks.</p>
-            </div>
-            <figure class="portrait">
-                <video controls playsinline preload="none" poster="media/sim2real-pickup.webp" width="540" height="720" aria-label="August 7, 2025: learned RL policy picks up a cube on a real robot">
-                    <source src="media/sim2real-pickup.mp4" type="video/mp4" />
-                    <a href="https://x.com/k7agar/status/1953470993558900803">Watch the original pickup demo</a>.
-                </video>
-                <figcaption><span class="caption-title">Sim-to-real cube pickup.</span> <a href="https://x.com/k7agar/status/1953470993558900803">7 Aug 2025 ↗</a>
-                    <span class="mode">Autonomous RL policy · real hardware</span>
-                </figcaption>
-            </figure>
-        </div>
+<article class="personal-blog">
+<h1>two years of robotics, one year of intelligent robots</h1>
+<div class="story-row story-row-opening"><div class="story-prose"><p>two years of building robots, and about one year of trying to make them learn. a lot of experiments, failures and things that finally worked. i still get the same excitement i felt when my sim2real robot first picked up a cube lol.</p><div class="blog-part" id="starting">
+<p>the goal from the start was to work on intelligent systems: systems that use what they perceive and learn to make decisions, act toward a goal and adapt when things change. robots made sense because they have to do all of this in the physical world. as i was starting out, robotics was evolving too: <a href="https://github.com/Physical-Intelligence/openpi" title="pi0 was open sourced — github.com">pi0 was open sourced</a>, <a href="https://github.com/huggingface/lerobot" title="lerobot — github.com">lerobot</a> was early, NVIDIA released <a href="https://research.nvidia.com/labs/lpr/publication/gr00tn1_2025/" title="GR00T N1: open robot foundation model, March 2025 — nvidia.com">GR00T N1</a>, an open foundation model for humanoid robots. it was still not clear back then what was the general bet to scale up robot learning. highly dexterous manipulation was my interest back then (still kinda is).</p>
+<p>so i wanted to get familiar with <em>all</em> the verticals of robot learning. the simplest way i knew was to build things and see what worked.</p>
 
-        <nav class="contents" aria-label="On this page">
-            <span>projects</span>
-            <a href="#sra">Wall-E &amp; SRA</a>
-            <a href="#sim2real">sim → real</a>
-            <a href="#demonstrations">demonstrations</a>
-            <a href="#pretrained">pretrained policies</a>
-            <a href="#patch-policy">dense features</a>
-            <a href="#longer-tasks">longer tasks</a>
-            <a href="#next">demonstration tools</a>
-            <a href="#full-stack">full stack</a>
-        </nav>
+</div></div><div class="story-media"><figure class="wide-demo"><video aria-label="The cube finally lifts. August 7, 2025." controls="" height="720" muted="" playsinline="" poster="../assets/media/robotics/sim2real-pickup.webp" preload="none" width="540"><source src="../assets/media/robotics/sim2real-pickup.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/1953470993558900803" title="Watch the original demo — x.com">Watch the original demo</a></video>
+<figcaption><span class="caption-title">The cube finally lifts. August 7, 2025.</span> <a href="https://x.com/k7agar/status/1953470993558900803" title="Original demo — x.com">Original demo ↗</a><span class="mode">Autonomous RL policy · real hardware</span></figcaption>
+</figure></div></div><figure class="stack-map"><div class="stack-map-label">verticals i’ve explored</div><div class="stack-map-canvas"><svg aria-labelledby="stack-map-title stack-map-desc" role="group" viewbox="0 0 720 565" xmlns="http://www.w3.org/2000/svg">
+<title id="stack-map-title">where the verticals of my work overlap</title>
+<desc id="stack-map-desc">Three overlapping verticals: hardware and data, policies and learning, deployment and evaluation. Cloth folding connects all three. Each project links to its write-up below. Locomotion appears in the hardware gallery; the learned-policy work here focuses on manipulation.</desc>
+<circle class="venn-domain" cx="360" cy="230" fill="#dde8f1" fill-opacity=".55" r="195" stroke="#98acbe"></circle>
+<circle class="venn-domain" cx="235" cy="365" fill="#f3dfc7" fill-opacity=".55" r="195" stroke="#c9a782"></circle>
+<circle class="venn-domain" cx="485" cy="365" fill="#dce8d5" fill-opacity=".55" r="195" stroke="#9bb08e"></circle>
+<text class="domain-name" x="360" y="88">deployment &amp; evaluation</text>
+<text class="domain-detail" x="360" y="110">inference · control · reliability</text>
+<text class="domain-name" x="172" y="377">hardware &amp; data</text>
+<text class="domain-detail" x="172" y="400">robots · sensors · demonstrations</text>
+<text class="domain-name" x="548" y="377">policies &amp; learning</text>
+<text class="domain-detail" x="548" y="400">imitation · RL · language / vision</text>
+<a aria-label="remote inference experiments" class="project" href="#inference"><title>remote inference experiments</title><rect height="38" rx="10" width="164" x="278" y="130"></rect><text x="360" y="155">robodal ↗</text></a>
+<a aria-label="human-in-the-loop recovery data with karma" class="project" href="#recovery"><title>human-in-the-loop recovery data with karma</title><rect height="38" rx="10" width="175" x="139.5" y="231"></rect><text x="227" y="256">VR teleop / karma ↗</text></a>
+<a aria-label="pretrained policies on hardware" class="project" href="#pretrained"><title>pretrained policies on hardware</title><rect height="38" rx="10" width="185" x="400.5" y="231"></rect><text x="493" y="256">MolmoAct 2 ↗</text></a>
+<a aria-label="current cloth-folding work: hardware, data, policies and evaluation" class="project stack-center" href="#full-stack"><title>our current cloth-folding work</title><rect height="64" rx="16" width="214" x="253" y="292"></rect><text class="center-name" x="360" y="319">cloth folding ↗</text><text class="project-note" x="360" y="341">data → training → robot → eval</text></a>
+<a aria-label="our servo and magnetic-encoder leader arms" class="project" href="#demonstrations"><title>our servo and magnetic-encoder leader arms</title><rect height="38" rx="10" width="178" x="81" y="423"></rect><text x="170" y="448">GELLO / encoders ↗</text></a>
+<a aria-label="portable demonstration hardware and visualization" class="project" href="#next"><title>portable demonstration hardware and visualization</title><rect height="38" rx="10" width="124" x="108" y="474"></rect><text x="170" y="499">tinyUMI ↗</text></a>
+<a aria-label="reinforcement learning and sim-to-real cube pickups" class="project" href="#sim2real"><title>reinforcement learning and sim-to-real cube pickups</title><rect height="38" rx="10" width="192" x="454" y="423"></rect><text x="550" y="448">PPO / FPO · sim2real ↗</text></a>
+<a aria-label="Patch Policy reproduction on Push-T and SO-101" class="project" href="#patch-policy"><title>Patch Policy reproduction on Push-T and SO-101</title><rect height="38" rx="10" width="146" x="477" y="474"></rect><text x="550" y="499">Patch Policy ↗</text></a>
+<a aria-label="reinforcement learning with physical sensing and control" class="project" href="#longer-tasks"><title>reinforcement learning with physical sensing and control</title><rect height="38" rx="10" width="156" x="282" y="472"></rect><text x="360" y="497">Physical Atari ↗</text></a>
+</svg></div><div class="stack-map-tasks"><a href="#full-stack">manipulation <span>cloth folding ↗</span></a><a href="#random-robotics">locomotion <span>hardware builds ↗</span></a><a href="#general-agents">general agents <span>Astra experiments ↗</span></a></div></figure>
 
-        <section class="chapter" id="sra">
-            <p class="eyebrow">hardware &amp; workshops / SRA-VJTI</p>
-            <h2>robot kits and manipulation workshops</h2>
-            <p>At <a href="https://sravjti.in/">SRA-VJTI</a>, the Society of Robotics and Automation at VJTI, I contributed to robot kits and workshops for students.</p>
-            <p>For <a href="https://github.com/sra-vjti/wall-e">Wall-E</a>, I helped manufacture, test, and sell robot kits with the team for <strong>300+ students</strong>. Wall-E is a two-wheeled, ESP32-based robot for learning line following, self-balancing, PID control, and embedded systems. The firmware and workshop material are open source.</p>
-            <div class="media-pair photo-pair">
-                <figure>
-                    <img src="media/walle-kits.webp" width="1000" height="750" loading="lazy" decoding="async" alt="Atharva sitting among stacks of boxed Wall-E robot kits in the lab" />
-                    <figcaption><span class="caption-title">Wall-E kits.</span> Manufacturing and testing with the team.</figcaption>
-                </figure>
-                <figure>
-                    <img src="media/sra-team.webp" width="1000" height="750" loading="lazy" decoding="async" alt="SRA teammates wearing matching shirts, photographed from behind in the lab" />
-                    <figcaption><span class="caption-title">The SRA team.</span></figcaption>
-                </figure>
-            </div>
-            <div class="experiment">
-                <div class="prose">
-                    <h3>from balancing to manipulation</h3>
-                    <p>I also taught robotic manipulation to <strong>100+ students</strong> through <a href="https://github.com/sra-vjti/mario">Mario</a>. It is a small three-degree-of-freedom arm used to explore forward and inverse kinematics, ROS, simulation, and real hardware. The robot design and code are open source too.</p>
-                    <p class="small"><a href="https://github.com/sra-vjti/wall-e">Wall-E code &amp; workshop</a> · <a href="https://github.com/sra-vjti/mario">Mario code &amp; workshop</a></p>
-                </div>
-                <figure>
-                    <div class="video-embed">
-                        <a class="embed-button" href="https://www.youtube.com/watch?v=AkP-XUwkO90" aria-label="Watch Wall-E v2.7 on YouTube">
-                            <img src="media/walle-robot.webp" width="750" height="1000" loading="lazy" decoding="async" alt="Assembled Wall-E robots on the workbench" />
-                            <span>▶ watch Wall-E v2.7 <small>4 min 57 sec · opens on YouTube</small></span>
-                        </a>
-                    </div>
-                    <figcaption><a href="https://www.youtube.com/watch?v=AkP-XUwkO90">Wall-E v2.7 ↗</a><span class="mode">Robot kit and workshop demo</span></figcaption>
-                </figure>
-            </div>
-            <p class="small">Photos and contribution notes from my <a href="https://docs.google.com/document/d/e/2PACX-1vQVDRWUQSxBWOJLnai54IIqBtUhYQYdf6JuM135Y68JIVEXunVxPX4IwIA1LLJXe77E9c_Wy_0_tU-y/pub">build log</a>.</p>
-            <div class="photo-notes">
-                <figure>
-                    <a href="https://x.com/k7agar/status/1986837557506941253/photo/1"><img src="media/workshop-parts.webp" width="825" height="1100" loading="lazy" decoding="async" alt="Bags of workshop components and reels spread across the floor" /></a>
-                    <figcaption><span class="caption-title">Workshop components.</span> <a href="https://x.com/k7agar/status/1986837557506941253">7 Nov 2025 ↗</a></figcaption>
-                </figure>
-                <figure>
-                    <a href="https://x.com/k7agar/status/1987803953158033641/photo/1"><img src="media/walle-pcb.webp" width="825" height="1100" loading="lazy" decoding="async" alt="A black SRA Wall-E v2.7 circuit board held up in the workshop" /></a>
-                    <figcaption><span class="caption-title">Wall-E v2.7 PCB.</span> <a href="https://x.com/k7agar/status/1987803953158033641">10 Nov 2025 ↗</a></figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section class="chapter" id="sim2real">
-            <p class="eyebrow">01 / July–August 2025</p>
-            <h2>sim-to-real cube pickup</h2>
-            <p>In <a href="https://x.com/k7agar/status/1950788162814664765">July 2025</a>, I began deploying a simulation-trained pickup policy on a real arm. The setup used <a href="https://x.com/k7agar/status/1951306235522810212">vision</a> and <a href="https://x.com/k7agar/status/1950794100594364474">PPO, with FPO still in progress</a>, building on <a href="https://x.com/k7agar/status/1953472428983869518">Stone Tao’s work</a>.</p>
-            <p>The August 6 trials progressed from a missed pickup to progress on the grasp, followed by the <a href="https://x.com/k7agar/status/1953470993558900803">August 7 cube pickup</a> shown above.</p>
-            <div class="media-pair portrait-pair">
-                <figure>
-                    <video controls playsinline preload="none" data-poster="media/sim2real-attempt.webp" width="540" height="720" aria-label="August 6: unsuccessful real-hardware pickup attempt">
-                        <source src="media/sim2real-attempt.mp4" type="video/mp4" />
-                        <a href="https://x.com/k7agar/status/1953104167482085578">Watch the original attempt</a>.
-                    </video>
-                    <figcaption><span class="caption-title">Still missing the pickup.</span> <a href="https://x.com/k7agar/status/1953104167482085578">6 Aug, 8:11 pm IST ↗</a><span class="mode">Autonomous RL policy · real hardware</span></figcaption>
-                </figure>
-                <figure>
-                    <video controls playsinline preload="none" data-poster="media/sim2real-progress.webp" width="528" height="720" aria-label="August 6: progress on a real-hardware cube pickup">
-                        <source src="media/sim2real-progress.mp4" type="video/mp4" />
-                        <a href="https://x.com/k7agar/status/1953121197300044173">Watch the original progress clip</a>.
-                    </video>
-                    <figcaption><span class="caption-title">Pickup progress.</span> <a href="https://x.com/k7agar/status/1953121197300044173">6 Aug, 9:19 pm IST ↗</a><span class="mode">Autonomous RL policy · real hardware</span></figcaption>
-                </figure>
-            </div>
-            <details>
-                <summary>The earlier attempt — 31 July 2025</summary>
-                <figure class="portrait">
-                    <video controls playsinline preload="none" data-poster="media/sim2real-july.webp" width="540" height="720" aria-label="July 31: early sim-to-real deployment on a physical robot arm">
-                        <source src="media/sim2real-july.mp4" type="video/mp4" />
-                        <a href="https://x.com/k7agar/status/1950788162814664765">Watch the July demo</a>.
-                    </video>
-                    <figcaption>Early real-hardware deployment. <a href="https://x.com/k7agar/status/1950788162814664765">Original post ↗</a><span class="mode">RL policy · real hardware</span></figcaption>
-                </figure>
-            </details>
-        </section>
-
-        <section class="chapter" id="demonstrations">
-            <p class="eyebrow">02 / November 2025</p>
-            <h2>behavioral cloning and human demonstrations</h2>
-            <div class="experiment">
-                <div class="prose">
-                    <p>In November, I moved to <a href="https://x.com/k7agar/status/1987224223392411954">behavioral cloning</a>, training a policy from demonstrations to pick up a wheel and move it toward a box.</p>
-                    <p>This led toward experiments with <a href="https://x.com/k7agar/status/1987226887027142936">larger vision-action models</a>, with compute <a href="https://x.com/k7agar/status/1987513647137173886">sponsored by Prime Intellect</a>.</p>
-                </div>
-                <figure class="portrait">
-                    <video controls playsinline preload="none" data-poster="media/behavioral-cloning.webp" width="404" height="720" aria-label="Behavioral-cloning policy manipulating a wheel on real hardware">
-                        <source src="media/behavioral-cloning.mp4" type="video/mp4" />
-                        <a href="https://x.com/k7agar/status/1987224223392411954">Watch the cloning demo</a>.
-                    </video>
-                    <figcaption><span class="caption-title">Wheel manipulation with behavioral cloning.</span> <a href="https://x.com/k7agar/status/1987224223392411954">8 Nov 2025 ↗</a><span class="mode">Learned policy rollout · real hardware</span></figcaption>
-                </figure>
-            </div>
-            <p>I also applied <a href="https://geopavlakos.github.io/hamer/">HaMeR</a> to <a href="https://x.com/k7agar/status/1989731085501304998">Egocentric-10K from Eddy Xu / Build AI</a> to reconstruct 3D hand meshes from human demonstrations.</p>
-            <figure class="wide-demo">
-                <video controls playsinline preload="none" data-poster="media/hand-reconstruction.webp" width="960" height="540" aria-label="HaMeR hand-mesh reconstruction over Egocentric-10K human activity footage">
-                    <source src="media/hand-reconstruction.mp4" type="video/mp4" />
-                    <a href="https://x.com/k7agar/status/1989731085501304998">Watch the reconstruction visualization</a>.
-                </video>
-                <figcaption><span class="caption-title">HaMeR hand reconstruction on Egocentric-10K.</span> <a href="https://x.com/k7agar/status/1989731085501304998">15 Nov 2025 ↗</a><span class="mode">Human footage · hand-mesh visualization</span></figcaption>
-            </figure>
-        </section>
-
-        <section class="chapter" id="pretrained">
-            <p class="eyebrow">03 / April–May 2026</p>
-            <h2>pretrained policies and remote inference</h2>
-            <p>I deployed <a href="https://x.com/k7agar/status/2052546425620406743">Ai2's MolmoAct 2 on my setup</a>, with unseen objects and an unseen environment. It could perform some tasks out of the box, with limited capability. I observed retries and gripper adjustments, but dexterous tasks remained difficult.</p>
-            <figure class="wide-demo">
-                <video controls playsinline preload="none" data-poster="media/molmoact2.webp" width="960" height="540" aria-label="MolmoAct 2 policy trials on Atharva's robot, shown at two times speed">
-                    <source src="media/molmoact2.mp4" type="video/mp4" />
-                    <a href="https://x.com/k7agar/status/2052546425620406743">Watch the MolmoAct 2 trials</a>.
-                </video>
-                <figcaption><span class="caption-title">MolmoAct 2 deployment.</span> <a href="https://x.com/k7agar/status/2052546425620406743">8 May 2026 ↗</a><span class="mode">Autonomous pretrained policy · real hardware · 2× source speed</span></figcaption>
-            </figure>
-            <p>I ran the model on a <a href="https://x.com/k7agar/status/2052548305427767571">single RTX 4090</a> and wrote my own inference engine.</p>
-            <figure class="snapshot snapshot--right">
-                <a href="https://x.com/k7agar/status/2052550568355520542/photo/1"><img src="media/molmoact-setup.webp" width="825" height="1100" loading="lazy" decoding="async" alt="Two robot arms on a cluttered workbench with an improvised overhead camera mount" /></a>
-                <figcaption><span class="caption-title">Robot arms and overhead camera.</span> <a href="https://x.com/k7agar/status/2052550568355520542">8 May 2026 ↗</a></figcaption>
-            </figure>
-            <h3>robodal: serving π₀ remotely</h3>
-            <p>In <a href="https://github.com/vovw/robodal">robodal</a>, I built an inference engine to serve Physical Intelligence's π₀ from Modal and benchmarked round-trip latency. In the April 12 benchmark, median latency was 45.6 ms locally, 294.5 ms over the TCP portal, 374.1 ms over WebSocket, and 493.3 ms over HTTP (30 measured calls, 5 warmups).</p>
-            <p class="small">The closed-loop tests used the ALOHA transfer-cube simulator, with 5–10 episodes per setting.</p>
-            <figure class="wide-demo">
-                <video controls playsinline preload="none" data-poster="media/robodal.webp" width="640" height="480" aria-label="Robodal: π₀ served from Modal controlling the ALOHA transfer-cube simulator">
-                    <source src="media/robodal.mp4" type="video/mp4" />
-                    <a href="https://x.com/k7agar/status/2043312379258446131">Watch the original demo</a>.
-                </video>
-                <figcaption><span class="caption-title">π₀ on Modal, controlling ALOHA in simulation.</span> <a href="https://x.com/k7agar/status/2043312379258446131">12 Apr 2026 ↗</a></figcaption>
-            </figure>
-        </section>
-
-        <section class="chapter" id="patch-policy">
-            <p class="eyebrow">04 / July 2026</p>
-            <h2>Patch Policy reproduction</h2>
-            <p><a href="https://arxiv.org/abs/2607.18236">Patch Policy, by Zhou, Cui and colleagues</a>, uses dense image-patch features instead of pooling the whole image into one representation. I <a href="https://github.com/vovw/patchpol">reproduced it on Push-T</a>, then tried it on hardware.</p>
-            <div class="media-pair">
-                <figure>
-                    <video controls playsinline preload="none" data-poster="media/patch-pusht.webp" width="224" height="224" aria-label="Atharva's Patch Policy reproduction performing Push-T in simulation">
-                        <source src="media/patch-pusht.mp4" type="video/mp4" />
-                        <a href="https://x.com/k7agar/status/2080551476041228335">Watch the Push-T reproduction</a>.
-                    </video>
-                    <figcaption><span class="caption-title">Push-T reproduction.</span> <a href="https://x.com/k7agar/status/2080551476041228335">24 Jul 2026 ↗</a><span class="mode">Autonomous policy · simulation</span></figcaption>
-                </figure>
-                <figure>
-                    <video controls playsinline preload="none" data-poster="media/patch-hardware.webp" width="404" height="720" aria-label="Patch Policy reproduction on a real robot with MacBook M3 Pro inference">
-                        <source src="media/patch-hardware.mp4" type="video/mp4" />
-                        <a href="https://x.com/k7agar/status/2081313497741447559">Watch the hardware experiment</a>.
-                    </video>
-                    <figcaption><span class="caption-title">Real-hardware trial with M3 Pro inference.</span> <a href="https://x.com/k7agar/status/2081313497741447559">26 Jul 2026 ↗</a><span class="mode">Learned policy · real hardware</span></figcaption>
-                </figure>
-            </div>
-            <table class="result-table">
-                <caption>Push-T results reported in my <a href="https://github.com/vovw/patchpol#results">reproduction</a> · 100 rollouts · 50k training steps · EMA weights</caption>
-                <thead><tr><th scope="col">Metric</th><th scope="col">Reproduction</th><th scope="col">Paper target</th></tr></thead>
-                <tbody>
-                    <tr><th scope="row">Final coverage</th><td>0.772 ± 0.032</td><td>0.83</td></tr>
-                    <tr><th scope="row">Maximum coverage</th><td>0.821 ± 0.028</td><td>—</td></tr>
-                    <tr><th scope="row">Success (coverage &gt; 0.95)</th><td>52%</td><td>—</td></tr>
-                </tbody>
-            </table>
-            <p class="small">Coverage measures overlap with the target. Values and ± notation are as reported in the repository.</p>
-            <p>The policy sometimes reached the target and then drifted away. The <a href="https://github.com/vovw/patchpol#known-deviations-from-the-paper">implementation differences</a> and possible fixes are documented alongside the code.</p>
-            <p class="aside">Hardware notes identify idle demonstration frames as a possible cause of limited motion. The <a href="https://github.com/vovw/patchpol#real-robot-so-101">notes</a> describe trimming idle prefixes and using a longer action horizon as the next adjustments to try.</p>
-        </section>
-
-        <section class="chapter" id="longer-tasks">
-            <p class="eyebrow">05 / August–September 2026</p>
-            <h2>physical control and multi-step tasks</h2>
-            <div class="experiment">
-                <div class="prose">
-                    <h3>Atari, with an actual joystick</h3>
-                    <p>We built an RL setup for Atari using an external camera to observe the screen and STS3215 servos to move a physical joystick.</p>
-                    <p>This was a build with <a href="https://x.com/4rynv">@4rynv</a>, <a href="https://x.com/sahilsapage">@sahilsapage</a>, and <a href="https://x.com/LakshyaLalwani7">@LakshyaLalwani7</a>. <a href="https://x.com/k7agar/status/2085580125148704777">Setup details ↗</a></p>
-                </div>
-                <figure class="portrait">
-                    <video controls playsinline preload="none" data-poster="media/physical-atari.webp" width="404" height="720" aria-label="RL agent playing Atari using an external camera and servo-actuated joystick">
-                        <source src="media/physical-atari.mp4" type="video/mp4" />
-                        <a href="https://x.com/k7agar/status/2085576138961907900">Watch physical Atari</a>.
-                    </video>
-                    <figcaption><span class="caption-title">Atari with camera input and servo control.</span> <a href="https://x.com/k7agar/status/2085576138961907900">7 Aug 2026 ↗</a><span class="mode">Autonomous RL · game on screen, physical sensing/control</span></figcaption>
-                </figure>
-            </div>
-            <figure class="snapshot">
-                <a href="https://x.com/k7agar/status/2085580125148704777/photo/1"><img src="media/atari-camera.webp" width="619" height="1100" loading="lazy" decoding="async" alt="External camera facing the Atari screen, mounted on a stand beside the laptop and joystick hardware" /></a>
-                <figcaption><span class="caption-title">External camera for the Atari agent.</span> <a href="https://x.com/k7agar/status/2085580125148704777">7 Aug 2026 ↗</a></figcaption>
-            </figure>
-            <h3>towel and T-shirt folding</h3>
-            <p>I went from a <a href="https://x.com/k7agar/status/2092959111843578262">zero-shot towel-folding attempt</a> to <a href="https://x.com/k7agar/status/2094818716433465631">T-shirt folding with Physical Intelligence's π0.5</a>. Then came <a href="https://x.com/k7agar/status/2096590458369810679">Astra experiments with Sujal</a>, from standing a block upright to wiping and folding.</p>
-            <div class="media-pair">
-                <figure>
-                    <video controls playsinline preload="none" data-poster="media/pi05-folding.webp" width="960" height="540" aria-label="Pi zero point five T-shirt folding in an unseen environment, four times speed">
-                        <source src="media/pi05-folding.mp4" type="video/mp4" />
-                        <a href="https://x.com/k7agar/status/2094818716433465631">Watch the π0.5 folding demo</a>.
-                    </video>
-                    <figcaption><span class="caption-title">π0.5, an unseen environment.</span> <a href="https://x.com/k7agar/status/2094818716433465631">1 Sep 2026 ↗</a><span class="mode">Autonomous pretrained policy · real hardware · <a href="https://x.com/k7agar/status/2094820542641770646">4× source speed</a></span></figcaption>
-                </figure>
-                <figure>
-                    <video controls playsinline preload="none" data-poster="media/folding-failure.webp" width="640" height="480" aria-label="Real robot makes an initial fold, then disrupts it in the later actions">
-                        <source src="media/folding-failure.mp4" type="video/mp4" />
-                        <a href="https://x.com/k7agar/status/2096601215652249753">Watch the folding failure</a>.
-                    </video>
-                    <figcaption><span class="caption-title">Initial fold undone by later actions.</span> <a href="https://x.com/k7agar/status/2096601215652249753">6 Sep 2026 ↗</a><span class="mode">Model-directed experiment · real hardware</span></figcaption>
-                </figure>
-            </div>
-            <p>In the Astra trial, the robot made an initial fold but disrupted it with later actions.</p>
-        </section>
-
-        <section class="chapter" id="next">
-            <p class="eyebrow">06 / September 2026</p>
-            <h2>tools for collecting demonstrations</h2>
-            <div class="experiment">
-                <div class="prose">
-                    <p>I am building a <a href="https://x.com/k7agar/status/2098782572247703814">handheld UMI-style gripper</a>, inspired by <a href="https://github.com/YosubShin/yam-umi">Yosub Shin's yam-umi</a>. The clip below shows a manual test of the interface.</p>
-                    <p>I have also been trying <a href="https://x.com/k7agar/status/2097750401789685824">human video → storyboard → robot action</a>, extending the earlier work on human demonstrations.</p>
-                </div>
-                <figure class="portrait">
-                    <video controls playsinline preload="none" data-poster="media/umi.webp" width="576" height="720" aria-label="Atharva manually testing a handheld UMI-style gripper interface">
-                        <source src="media/umi.mp4" type="video/mp4" />
-                        <a href="https://x.com/k7agar/status/2098782572247703814">Watch the UMI hardware test</a>.
-                    </video>
-                    <figcaption><span class="caption-title">Handheld gripper test.</span> <a href="https://x.com/k7agar/status/2098782572247703814">12 Sep 2026 ↗</a><span class="mode">Human-operated interface test · real hardware</span></figcaption>
-                </figure>
-            </div>
-            <div class="photo-notes photo-notes--right">
-                <figure>
-                    <a href="https://x.com/k7agar/status/2098783385355444667/photo/1"><img src="media/umi-cad.webp" width="1100" height="1015" loading="lazy" decoding="async" alt="CAD view of the yellow and grey handheld UMI-style gripper" /></a>
-                    <figcaption><span class="caption-title">UMI-style gripper CAD.</span> <a href="https://x.com/k7agar/status/2098783385355444667">12 Sep 2026 ↗</a><span class="mode">Inspired by <a href="https://github.com/YosubShin/yam-umi">Yosub Shin's yam-umi</a> · with Astra's help</span></figcaption>
-                </figure>
-                <figure>
-                    <a href="https://x.com/k7agar/status/2097750512187933138/photo/1"><img src="media/human-storyboard.webp" width="939" height="1100" loading="lazy" decoding="async" alt="Six frames from a human demonstration placing a handheld tool into its case and closing the lid" /></a>
-                    <figcaption><span class="caption-title">Human demonstration storyboard.</span> <a href="https://x.com/k7agar/status/2097750512187933138">9 Sep 2026 ↗</a><span class="mode">Frames from the human demonstration</span></figcaption>
-                </figure>
-            </div>
-        </section>
-        <section class="chapter" id="full-stack">
-            <p class="eyebrow">07 / full stack</p>
-            <h2>cloth folding on our own infrastructure</h2>
-            <p><a href="https://github.com/sra-vjti/karma">Karma · GitHub ↗</a></p>
-            <figure class="wide-demo">
-                <video controls playsinline preload="none" data-poster="media/full-stack-folding.webp" width="848" height="478" aria-label="Cloth folding with our own infrastructure for inference, model training, and human-in-the-loop DAgger, shown at 1.5 times speed">
-                    <source src="media/full-stack-folding.mp4" type="video/mp4" />
-                    <a href="https://x.com/k7agar/status/2097014434745201002">Watch the original demo</a>.
-                </video>
-                <figcaption><span class="caption-title">Full stack running on our own infrastructure: inference, model training, and human-in-the-loop DAgger.</span><span class="mode">Real hardware · 1.5× speed</span> <a href="https://x.com/k7agar/status/2097014434745201002">7 Sep 2026 ↗</a></figcaption>
-            </figure>
-            <p><a href="mailto:k7agar@gmail.com">Contact me</a> for project details or collaboration.</p>
-        </section>
-        <footer>
-            <p>Last updated <time datetime="2026-09-16">16 September 2026</time>. Project code and original demos are linked throughout.</p>
-            <p><a href="https://github.com/vovw">code</a> · <a href="https://x.com/k7agar/media">more experiments</a> · <a href="../craft.html">other builds</a> · <a href="#main">back to the top ↑</a></p>
-        </footer>
-    </main>
+<div class="blog-part" id="sim2real">
+<p>so the first thing i worked on, almost 1 year and 2 months ago, was sim2real using pure reinforcement learning. we compared 2 methods: <a href="https://flowreinforce.github.io/" title="flow policy optimization — flowreinforce.github.io">flow policy optimization</a> and <a href="https://arxiv.org/abs/1707.06347" title="Proximal Policy Optimization Algorithms — arxiv.org">good ol PPO</a>. <a href="https://blog.sravjti.in/2025/08/14/flow-models-for-better-policies.html" title="SRA VJTI: Flow Models for Better Policies — blog.sravjti.in">our write-up ↗</a></p>
+<p>results were amazing. we struggled a lot with flow exploration, reward explosion and hardware transfer, but overall learned a lot about what exactly bottlenecks good transfer, what are the open problems for sim learning, and how reinforcement learning agents learn.</p>
+<p>very very very cool.</p>
+</div>
+<div class="blog-part" id="demonstrations">
+<div class="story-row"><div class="story-prose"><p>now what if we don’t want to learn from scratch? what if we learn from humans? imitation learning was exciting because we could start from demonstrations instead of figuring everything out through rewards. <a href="https://tonyzhaozh.github.io/aloha/" title="action chunking — tonyzhaozh.github.io">action chunking</a> especially caught my attention.</p><p>there are so many clever ways to learn from demonstrations, from <a href="https://tonyzhaozh.github.io/aloha/" title="ACT — tonyzhaozh.github.io">ACT</a> and <a href="https://diffusion-policy.cs.columbia.edu/" title="diffusion policy — diffusion-policy.cs.columbia.edu">diffusion policy</a> to language-conditioned policies.</p><p>but first we needed a way to collect demonstrations on our robots. so we made our own kind of <a href="https://wuphilipp.github.io/gello_site/" title="GELLO — wuphilipp.github.io">GELLO</a>, cheaper, using digital servos from my old robot arm which we used for sim2real. that worked well! this still needs the robot there while collecting data. collecting away from the robot is a different problem, which we came back to with UMI.</p></div><div class="story-media"><figure class="wide-demo"><video aria-label="GELLO-inspired leader arms controlling the YAMs." controls="" data-poster="../assets/media/data/yam-teleoperation.webp" height="540" muted="" playsinline="" preload="none" width="960"><source src="../assets/media/data/yam-teleoperation.mp4" type="video/mp4"/><a href="https://x.com/vruga_/status/2049129307222786309" title="Watch the source — x.com">Watch the source</a></video>
+<figcaption>GELLO-inspired leader arms controlling the YAMs. <a href="https://x.com/vruga_/status/2049129307222786309" title="Source — x.com">Source ↗</a><span class="mode">Human teleoperation · real hardware</span></figcaption>
+</figure></div></div>
+<div class="story-row story-row-short"><div class="story-prose"><p>later we made another cheap teleop leader arm using magnetic encoders, around 1/10th the cost of the original leader arm.</p></div><div class="story-media"><figure class="wide-demo portrait-demo"><video aria-label="cheap magnetic-encoder leader arm for teleoperation." controls="" data-poster="../assets/media/data/leader-arm.webp" height="960" muted="" playsinline="" preload="none" width="540"><source src="../assets/media/data/leader-arm.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/2105041329604698464" title="watch the original — x.com">watch the original ↗</a></video><figcaption>cheap magnetic-encoder leader arm for teleoperation. <a href="https://x.com/k7agar/status/2105041329604698464" title="original post — x.com">↗</a></figcaption></figure></div></div>
+</div>
+<div class="blog-part" id="pretrained">
+<div class="story-row"><div class="story-prose"><p>another thing that changed how i thought about robotics was pretrained policies. <a href="https://allenai.org/blog/molmoact2" title="MolmoAct 2 — allenai.org">MolmoAct 2</a> worked zero-shot on <a href="https://huggingface.co/allenai/MolmoAct2-BimanualYAM" title="YAM arms — huggingface.co">YAM arms</a>. it was amazing and literally insane to see a model you install from the internet “just work”. truly my gpt2 moment.</p></div><div class="story-media"><figure class="wide-demo"><video aria-label="MolmoAct 2 on my setup. May 2026." controls="" data-poster="../assets/media/robotics/molmoact2.webp" height="540" muted="" playsinline="" preload="none" width="960"><source src="../assets/media/robotics/molmoact2.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/2052546425620406743" title="Watch the original demo — x.com">Watch the original demo</a></video>
+<figcaption><span class="caption-title">MolmoAct 2 on my setup. May 2026.</span> <a href="https://x.com/k7agar/status/2052546425620406743" title="Original demo — x.com">Original demo ↗</a><span class="mode">Autonomous pretrained policy · real hardware</span></figcaption>
+</figure></div></div>
+<div class="story-row"><div class="story-prose"><p>firmly made me believe that scaling data is a big win, especially its quality and distribution, with of course <a href="https://aiforgood.itu.int/event/replay-closing-the-100000-year-data-gap-in-robotics/" title="Ken Goldberg: Closing the 100,000-Year Data Gap in Robotics — aiforgood.itu.int">good ol fashioned engineering</a>.</p><p>but it still struggled with the more dexterous parts. buddy tried really hard to fold my lossfunk shirt lol.</p></div><div class="story-media"><figure class="wide-demo"><video aria-label="MolmoAct 2 struggling to fold my lossfunk shirt." controls="" data-poster="../assets/media/robotics/gallery/2052546724921815167.webp" height="360" muted="" playsinline="" preload="none" width="640"><source src="../assets/media/robotics/gallery/2052546724921815167-compact.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/2052546724921815167" title="watch the original — x.com">watch the original ↗</a></video><figcaption>MolmoAct 2 struggling to fold my lossfunk shirt. <a href="https://x.com/k7agar/status/2052546724921815167" title="original post — x.com">↗</a></figcaption></figure></div></div>
+</div>
+<div class="blog-part" id="recovery">
+<div class="story-row story-row-short"><div class="story-prose"><p>we also post-trained <a href="https://x.com/k7agar/status/2094818716433465631" title="π0.5 for cloth folding — x.com">π0.5 for cloth folding</a> with online RL.</p></div><div class="story-media"><figure class="wide-demo"><video aria-label="Cloth folding with π0.5." controls="" data-poster="../assets/media/robotics/pi05-folding.webp" height="540" muted="" playsinline="" preload="none" width="960"><source src="../assets/media/robotics/pi05-folding.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/2094818716433465631" title="Watch the original demo — x.com">Watch the original demo</a></video>
+<figcaption>cloth folding with π0.5. <a href="https://x.com/k7agar/status/2094818716433465631" title="original demo — x.com">original demo ↗</a><span class="mode">Autonomous policy trained for cloth folding · real hardware · 4× speed</span></figcaption>
+</figure></div></div>
+<div class="story-row"><div class="story-prose"><p id="general-agents">i’m also interested in general-purpose agents that can use computers, write code and control robots. i wanted to try this on our hardware with Astra.</p><p>with <a href="https://5usu.github.io/" title="Sujal’s website — 5usu.github.io">Sujal</a>, we tried <a href="https://x.com/k7agar/status/2096590458369810679" title="Astra to stand a block upright — x.com">Astra to stand a block upright</a> and <a href="https://x.com/k7agar/status/2096593654320341027" title="wipe a table — x.com">wipe a table</a>. we also tried folding. it made the first fold, then messed it up with the next few actions. still a lot to figure out, but i want to keep working on this.</p></div><div class="story-media"><figure class="wide-demo"><video aria-label="An initial fold undone by later actions." controls="" data-poster="../assets/media/robotics/folding-failure.webp" height="480" muted="" playsinline="" preload="none" width="640"><source src="../assets/media/robotics/folding-failure.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/2096601215652249753" title="Watch the original demo — x.com">Watch the original demo</a></video>
+<figcaption><span class="caption-title">An initial fold undone by later actions.</span> <a href="https://x.com/k7agar/status/2096601215652249753" title="Original demo — x.com">Original demo ↗</a><span class="mode">Model-directed Astra experiment · real hardware</span></figcaption>
+</figure></div></div>
+<div class="story-row"><div class="story-prose"><p>so how do we get better <em>online</em> and learn to recover when things go wrong?</p><p>we built a <a href="https://github.com/SRA-VJTI/karma" title="SRA-VJTI/karma: VR teleoperation — github.com">VR teleop setup</a> for the YAMs, inspired by <a href="https://github.com/Dream-Machines-Robotics/vr-teleop-kit" title="Dream Machines Robotics’ vr-teleop-kit — github.com">Dream Machines Robotics’ vr-teleop-kit</a>. it lets us step in when MolmoAct 2 gets stuck and collect corrections. the hard part is still getting the policy to work reliably without our help.</p></div><div class="story-media"><figure class="wide-demo"><video aria-label="YAMs + Meta Quest: human-in-the-loop data collection." controls="" data-poster="../assets/media/data/yam-vr-hitl.jpg" height="600" muted="" playsinline="" preload="none" width="960"><source src="../assets/media/data/yam-vr-hitl.mp4" type="video/mp4"/><a href="https://github.com/SRA-VJTI/karma/blob/b4f06f6d645755e605b6c0aec7c10af3d2c911d6/docs/media/yam-human-in-the-loop.mp4" title="Watch the source — github.com">Watch the source</a></video>
+<figcaption>YAMs + Meta Quest: human-in-the-loop data collection. <a href="https://github.com/SRA-VJTI/karma/blob/b4f06f6d645755e605b6c0aec7c10af3d2c911d6/docs/media/yam-human-in-the-loop.mp4" title="Source — github.com">Source ↗</a><span class="mode">Human intervention / shared policy-operator workflow · real hardware</span></figcaption>
+</figure></div></div>
+</div>
+<p id="inference">getting these models running also meant working on remote and LAN inference. i explored the latency added by sending observations and actions between the robot and a remote server. <a href="https://github.com/vovw/robodal" title="robodal — github.com">robodal ↗</a></p>
+<div class="blog-part" id="next">
+<div class="story-row"><div class="story-prose"><p>coming back to collecting data: what if you want to collect new skills where you can’t take the robots or set them up? that’s where <a href="https://umi-gripper.github.io/" title="UMI — umi-gripper.github.io">UMI</a> comes in. here comes <a href="https://github.com/vovw/tinyumi" title="tinyUMI — github.com">tinyUMI</a>, a really cheap UMI device made for the YAMs. still working on it.</p></div><div class="story-media"><figure class="wide-demo umi-collection"><video aria-label="UMI data collection with the handheld gripper." controls="" data-gallery-loop="" data-poster="../assets/media/robotics/umi-data-collection.webp" height="600" loop="" muted="" playsinline="" preload="none" width="480"><source src="../assets/media/robotics/umi-data-collection.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/2098782572247703814" title="UMI data collection — x.com">watch the original ↗</a></video><figcaption>UMI data collection. <a href="https://x.com/k7agar/status/2098782572247703814" title="UMI data collection — x.com">↗</a><span class="mode">Human-operated handheld gripper</span></figcaption></figure></div></div>
+<div class="story-media-strip"><figure class="wide-demo"><video aria-label="tinyUMI data collection + visualization. October 7, 2026." controls="" data-poster="../assets/media/robotics/tinyumi-visualization.webp" height="480" muted="" playsinline="" preload="none" width="1280"><source src="../assets/media/robotics/tinyumi-visualization.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/2107877941619397109" title="Watch the original demo — x.com">Watch the original demo</a></video>
+<figcaption><span class="caption-title">tinyUMI data collection + visualization. October 7, 2026.</span> <a href="https://x.com/k7agar/status/2107877941619397109" title="Original demo — x.com">Original demo ↗</a><span class="mode">Recorded D405 camera view · IK over a static overhead photo</span></figcaption>
+</figure><figure class="snapshot"><a href="https://x.com/k7agar/status/2098783385355444667/photo/1"><img alt="CAD view of the handheld YAM-compatible UMI-style gripper" decoding="async" height="1015" loading="lazy" src="../assets/media/robotics/umi-cad.webp" width="1100"/></a><figcaption>Earlier gripper CAD. <a href="https://x.com/k7agar/status/2098783385355444667/photo/1" title="September 12 design post — x.com">September 12 design post ↗</a><span class="mode">Inspired by Yosub Shin’s YAM-UMI · with Astra’s help</span></figcaption>
+</figure></div>
+</div>
+<div class="blog-part" id="full-stack">
+<div class="story-row"><div class="story-prose"><p>the folding results from <a href="https://www.sunday.ai/blog/act-2-preview" title="Sunday: ACT-2 Preview — Generalizing Reliability — sunday.ai">Sunday</a> and <a href="https://www.dyna.co/research/dyna-1" title="Dyna: Dynamism v1 — dyna.co">Dyna</a> are the benchmark i keep coming back to.</p><p>cloth folding feels like a good test bed for learning methods because it’s long enough for mistakes to compound: the robot has to grasp, align and fold, and each action changes what the next one needs to do. it’s also easy to randomize the starting state by changing the cloth’s position, orientation or how crumpled it is, then reset and try again. with a fixed folding target and evaluation rules, we can compare methods on the same task and look at fold quality, completion time and recovery as well as success rate. that makes it a practical way to study whether a policy is getting more reliable over a whole sequence.</p><p>so currently we’re working toward an open recipe for cloth folding: collecting demonstrations and recovery data, training policies and testing them on our own setup.</p><p>right now we’re getting around 70% success on Level 1 folding, where the shirt starts laid out, in our initial 10-trial evaluation. we’re following the <a href="https://lerobot-robot-folding.hf.space/" title="Hugging Face: Unfolding Robotics — evaluation protocol">evaluation protocol from Hugging Face’s cloth-folding write-up</a>. still a small evaluation, but exciting to see it work. we’re looking at <a href="https://arxiv.org/abs/2605.25477" title="EXPO-FT: RL fine-tuning for vision-language-action models — arxiv.org">EXPO fine-tuning</a> and offline RL to improve folding, and looking at partial task completion, fold quality and completion time alongside success rate to understand where our policy needs to improve. the goal is to figure out what combination of SFT + RL works well enough to share as an open recipe.</p></div><div class="story-media"><figure class="wide-demo"><video aria-label="Cloth folding on our own training, inference, and human-in-the-loop stack." controls="" data-poster="../assets/media/robotics/full-stack-folding.webp" height="478" muted="" playsinline="" preload="none" width="848"><source src="../assets/media/robotics/full-stack-folding.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/2097014434745201002" title="Watch the original demo — x.com">Watch the original demo</a></video>
+<figcaption><span class="caption-title">Cloth folding on our own training, inference, and human-in-the-loop stack.</span> <a href="https://x.com/k7agar/status/2097014434745201002" title="Original demo — x.com">Original demo ↗</a><span class="mode">Real hardware · 1.5× speed</span></figcaption>
+</figure></div></div>
+</div>
+<div class="blog-part" id="patch-policy">
+<div class="story-row"><div class="story-prose"><p>a couple of side experiments also stayed with me. one was about how a policy represents what it sees. <a href="https://arxiv.org/abs/2607.18236" title="Patch Policy — arxiv.org">Patch Policy</a> uses spatial features from individual image patches instead of pooling the whole image into one representation. i reproduced it on Push-T and the SO-101, and would love to revisit it. <a href="https://github.com/vovw/patchpol" title="my reproduction — github.com">my reproduction ↗</a></p></div><div class="story-media"><div class="media-pair"><figure class="wide-demo"><video aria-label="My Patch Policy reproduction on Push-T." controls="" data-poster="../assets/media/robotics/patch-pusht.webp" height="224" muted="" playsinline="" preload="none" width="224"><source src="../assets/media/robotics/patch-pusht.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/2080551476041228335" title="Watch the original demo — x.com">Watch the original demo</a></video>
+<figcaption><span class="caption-title">My Patch Policy reproduction on Push-T.</span> <a href="https://x.com/k7agar/status/2080551476041228335" title="Original demo — x.com">Original demo ↗</a><span class="mode">Autonomous policy · simulation</span></figcaption>
+</figure><figure class="wide-demo"><video aria-label="Patch Policy reproduction on the SO-101." controls="" data-poster="../assets/media/robotics/patch-hardware.webp" height="720" muted="" playsinline="" preload="none" width="404"><source src="../assets/media/robotics/patch-hardware.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/2081313497741447559" title="Watch the original demo — x.com">Watch the original demo</a></video>
+<figcaption><span class="caption-title">Patch Policy reproduction on the SO-101.</span> <a href="https://x.com/k7agar/status/2081313497741447559" title="Original demo — x.com">Original demo ↗</a><span class="mode">Learned policy · real hardware</span></figcaption>
+</figure></div></div></div>
+</div>
+<div class="blog-part" id="longer-tasks">
+<div class="story-row"><div class="story-prose"><p>the other came from reading <a href="https://mitpress.mit.edu/9780262039246/reinforcement-learning/" title="Richard Sutton and Andrew Barto’s book on reinforcement learning — mitpress.mit.edu">Richard Sutton and Andrew Barto’s book on reinforcement learning</a>. highly recommend it. i’m planning a reading group on it soon. thanks <a href="https://x.com/spikedoanz" title="@spikedoanz — x.com">@spikedoanz</a> for the recommendation.</p><p>reading the book inspired us to try learning from experience on hardware, so we forked <a href="https://github.com/Keen-Technologies/physical-atari-rlc" title="Physical Atari — github.com">Physical Atari</a> and built a cheaper version using STS3215 servos. <a href="https://github.com/SRA-VJTI/physical-atari" title="our fork — github.com">our fork ↗</a></p></div><div class="story-media"><figure class="wide-demo portrait-demo"><video aria-label="Learning Atari through a camera and servo-actuated joystick." controls="" data-poster="../assets/media/robotics/physical-atari.webp" height="720" muted="" playsinline="" preload="none" width="404"><source src="../assets/media/robotics/physical-atari.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/2085576138961907900" title="Watch the original demo — x.com">Watch the original demo</a></video>
+<figcaption><span class="caption-title">Learning Atari through a camera and servo-actuated joystick.</span> <a href="https://x.com/k7agar/status/2085576138961907900" title="Original demo — x.com">Original demo ↗</a><span class="mode">Autonomous RL · game on screen, physical sensing/control</span></figcaption>
+</figure></div></div>
+</div>
+<div class="blog-part" id="sra">
+<p>again thinking back, this would not have been possible without people who supported me and believed that any of this can be possible independently. all this time i was super fortunate to be working with and be mentored by the most brilliant and amazing people.</p>
+<p>thank you <a href="https://x.com/antonwontonnn" title="Anton — x.com">Anton</a>, <a href="https://x.com/kunvar_" title="Kunvar — x.com">Kunvar</a>, <a href="https://x.com/DJiafei" title="Jiafei — x.com">Jiafei</a>, <a href="https://x.com/tirth_gada" title="Tirth — x.com">Tirth</a>, <a href="https://x.com/vruga_" title="Vrushtee — x.com">Vrushtee</a>, <a href="https://www.runpod.io/" title="RunPod — runpod.io">RunPod</a> for compute, and my <a href="https://sravjti.in/webring" title="SRA VJTI friends — sravjti.in/webring">friends</a> over @ <a href="https://sravjti.in/" title="SRA VJTI — sravjti.in">SRA VJTI</a>.</p>
+</div>
+<section class="blog-part robotics-gallery-section" id="random-robotics">
+<h2>random robotics things</h2>
+<p>a few other experiments, builds, friends’ robots and things from the lab. some of these go back a little further.</p>
+<div class="robotics-gallery">
+<figure class="gallery-item"><video aria-label="Wall-E 2.7 on track." controls="" data-gallery-loop="" data-poster="../assets/media/robotics/gallery/1985347847815065911.webp" height="360" loop="" muted="" playsinline="" preload="none" width="640"><source src="../assets/media/robotics/gallery/1985347847815065911-compact.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/1985347847815065911" title="watch the original — x.com">watch the original ↗</a></video><figcaption><a href="https://github.com/sra-vjti/wall-e" title="Wall-E — github.com">Wall-E 2.7</a> on track. <a href="https://x.com/k7agar/status/1985347847815065911" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><video aria-label="i ♥ lerobot." controls="" data-gallery-loop="" data-poster="../assets/media/robotics/gallery/1968737592662249956.webp" height="480" loop="" muted="" playsinline="" preload="none" width="270"><source src="../assets/media/robotics/gallery/1968737592662249956-compact.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/1968737592662249956" title="watch the original — x.com">watch the original ↗</a></video><figcaption>i ♥ lerobot. <a href="https://x.com/k7agar/status/1968737592662249956" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><video aria-label="a quadruped in the lab." controls="" data-gallery-loop="" data-poster="../assets/media/robotics/gallery/1932821849102283219.webp" height="480" loop="" muted="" playsinline="" preload="none" width="360"><source src="../assets/media/robotics/gallery/1932821849102283219-compact.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/1932821849102283219" title="watch the original — x.com">watch the original ↗</a></video><figcaption>a quadruped in the lab. <a href="https://x.com/k7agar/status/1932821849102283219" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><video aria-label="kurma, wireless and remote controlled." controls="" data-gallery-loop="" data-poster="../assets/media/robotics/gallery/1893329498948432067.webp" height="480" loop="" muted="" playsinline="" preload="none" width="360"><source src="../assets/media/robotics/gallery/1893329498948432067-compact.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/1893329498948432067" title="watch the original — x.com">watch the original ↗</a></video><figcaption>kurma, wireless and remote controlled. <a href="https://x.com/k7agar/status/1893329498948432067" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><video aria-label="make em groove. 🔊 sound on." controls="" data-poster="../assets/media/robotics/gallery/1880636472623309130.webp" height="720" playsinline="" preload="none" width="480"><source src="../assets/media/robotics/gallery/1880636472623309130.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/1880636472623309130" title="watch the original — x.com">watch the original ↗</a></video><figcaption>make em groove. 🔊 sound on. <a href="https://x.com/k7agar/status/1880636472623309130" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><a href="https://x.com/k7agar/status/2038239660825313786" title="iron hand. — x.com"><img alt="iron hand." decoding="async" height="640" loading="lazy" src="../assets/media/robotics/gallery/2038239660825313786-compact.webp" width="480"/></a><figcaption>iron hand. <a href="https://x.com/k7agar/status/2038239660825313786" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><a href="https://x.com/k7agar/status/2047225144314351912" title="Bhakti’s MAYA drone. 3d printed and very hacky. — x.com"><img alt="Bhakti’s MAYA drone. 3d printed and very hacky." decoding="async" height="640" loading="lazy" src="../assets/media/robotics/gallery/2047225144314351912-compact.webp" width="480"/></a><figcaption>Bhakti’s MAYA drone. 3d printed and very hacky. <a href="https://x.com/k7agar/status/2047225144314351912" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><a href="https://x.com/k7agar/status/2104211303074275753" title="the handheld gripper, now with a tracking camera. — x.com"><img alt="the handheld gripper, now with a tracking camera." decoding="async" height="640" loading="lazy" src="../assets/media/robotics/gallery/2104211303074275753-compact.webp" width="480"/></a><figcaption>the handheld gripper, now with a tracking camera. <a href="https://x.com/k7agar/status/2104211303074275753" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><a href="https://x.com/k7agar/status/1969770687121568201" title="twin arm. — x.com"><img alt="twin arm." decoding="async" height="640" loading="lazy" src="../assets/media/robotics/gallery/1969770687121568201-compact.webp" width="480"/></a><figcaption>twin arm. <a href="https://x.com/k7agar/status/1969770687121568201" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><a href="https://x.com/k7agar/status/1963853374836588640" title="santra. a different kind of lab companion. — x.com"><img alt="santra. a different kind of lab companion." decoding="async" height="542" loading="lazy" src="../assets/media/robotics/gallery/1963853374836588640-compact.webp" width="640"/></a><figcaption>santra. a different kind of lab companion. <a href="https://x.com/k7agar/status/1963853374836588640" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><video aria-label="moving from the duck to a generalist biped build." controls="" data-gallery-loop="" data-poster="../assets/media/robotics/gallery/1940732321487024421.webp" height="480" loop="" muted="" playsinline="" preload="none" width="270"><source src="../assets/media/robotics/gallery/1940732321487024421-compact.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/1940732321487024421" title="watch the original — x.com">watch the original ↗</a></video><figcaption>moving from the duck to a generalist biped build. <a href="https://x.com/k7agar/status/1940732321487024421" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><a href="https://x.com/k7agar/status/1936083832434049367" title="the duck-like biped prototype. it stares back. — x.com"><img alt="the duck-like biped prototype. it stares back." decoding="async" height="640" loading="lazy" src="../assets/media/robotics/gallery/1936083832434049367-compact.webp" width="480"/></a><figcaption>the duck-like biped prototype. it stares back. <a href="https://x.com/k7agar/status/1936083832434049367" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><a href="https://x.com/k7agar/status/1932103068021317857" title="a table-tennis robot reference. — x.com"><img alt="a table-tennis robot reference." decoding="async" height="640" loading="lazy" src="../assets/media/robotics/gallery/1932103068021317857-compact.webp" width="400"/></a><figcaption>a table-tennis robot reference. <a href="https://x.com/k7agar/status/1932103068021317857" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><a href="https://x.com/k7agar/status/1908462941352980818" title="MARIO. — x.com"><img alt="MARIO." decoding="async" height="640" loading="lazy" src="../assets/media/robotics/gallery/1908462941352980818-compact.webp" width="480"/></a><figcaption><a href="https://github.com/sra-vjti/MARIO" title="MARIO — github.com">MARIO</a>. <a href="https://x.com/k7agar/status/1908462941352980818" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><video aria-label="brummmmmmmm. a wheeled robot." controls="" data-gallery-loop="" data-poster="../assets/media/robotics/gallery/1902014642362397077.webp" height="480" loop="" muted="" playsinline="" preload="none" width="360"><source src="../assets/media/robotics/gallery/1902014642362397077-compact.mp4" type="video/mp4"/><a href="https://x.com/k7agar/status/1902014642362397077" title="watch the original — x.com">watch the original ↗</a></video><figcaption>brummmmmmmm. a wheeled robot. <a href="https://x.com/k7agar/status/1902014642362397077" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><a href="https://x.com/k7agar/status/1878797975801250103" title="kurma wiring. — x.com"><img alt="kurma wiring." decoding="async" height="640" loading="lazy" src="../assets/media/robotics/gallery/1878797975801250103-compact.webp" width="480"/></a><figcaption>kurma wiring. <a href="https://x.com/k7agar/status/1878797975801250103" title="original post — x.com">↗</a></figcaption></figure>
+<figure class="gallery-item"><a href="https://x.com/k7agar/status/1857720599545786868" title="baksaur (my superfast line follower). — x.com"><img alt="baksaur (my superfast line follower)." decoding="async" height="640" loading="lazy" src="../assets/media/robotics/gallery/1857720599545786868-compact.webp" width="480"/></a><figcaption>baksaur (my superfast line follower). <a href="https://x.com/k7agar/status/1857720599545786868" title="original post — x.com">↗</a></figcaption></figure>
+</div>
+</section>
+</article>
+<footer><p><a href="https://github.com/vovw">code</a> · <a href="https://x.com/k7agar/media">more experiments</a> · <a href="#main">back to the top ↑</a></p></footer>
+</main>
 </body>
 </html>
