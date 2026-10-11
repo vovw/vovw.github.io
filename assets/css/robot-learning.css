@@ -264,3 +264,33 @@ body.robot-page { max-width: 1600px; gap: 48px; }
   max-height: none;
   object-fit: contain;
 }
+
+/* Handheld demonstration → robot inference. */
+.umi-transfer-pair { display: grid; grid-template-columns: minmax(0, .65fr) 24px minmax(0, 1fr) 24px minmax(0, 1.3fr); gap: 12px; align-items: center; margin: 26px 0; }
+.robot-page .umi-transfer-pair video { width: 100%; height: auto; max-height: none; border-radius: 5px; }
+.umi-transfer-arrow { text-align: center; color: #9b3500; font-size: 32px; padding-bottom: 26px; }
+.umi-builds { margin: 20px 0 30px; border-bottom: 1px solid #e6e0d7; padding-bottom: 16px; }
+.umi-builds summary { cursor: pointer; color: #706c67; font-size: 15px; }
+.umi-builds summary:hover { color: #9b3500; }
+.umi-builds-collection { max-width: 280px; margin-top: 20px; }
+@media (max-width: 640px) {
+  .umi-transfer-pair { grid-template-columns: 1fr; gap: 12px; }
+  .umi-transfer-arrow { transform: rotate(90deg); padding: 0; justify-self: center; }
+}
+
+.umi-in-hand { max-width: 210px; }
+@media (max-width: 640px) { .umi-in-hand { max-width: 240px; } }
+
+/* Continuous prose beside a media column avoids a blank block per video. */
+.story-run-media:empty { display: none; }
+@media (min-width: 1024px) {
+  .story-run.is-column-layout { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: 24px; align-items: start; margin-top: 28px; }
+  .story-run.is-column-layout .story-row { display: block; margin: 0; }
+  .story-run.is-column-layout .story-prose p:last-child { margin-bottom: 17px; }
+  .story-run-prose, .story-run-media { min-width: 0; }
+  .story-run.is-column-layout .story-run-prose > .blog-part:first-child { margin-top: 0; }
+  .story-run.is-column-layout .story-run-media { display: flex; flex-direction: column; gap: 22px; }
+  .story-run-media .story-media { position: static; }
+  .story-run-media .media-short video { max-height: 190px; }
+  .story-run-media .media-short .portrait-demo video { max-height: none; }
+}
